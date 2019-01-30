@@ -7,7 +7,13 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+
+  <goods 
+    app-id='wxf11c5910cb729a82'
+    shop-id='{{45694034}}'
+    layout='{{0}}'
+  />
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{motto}}11111</text>
   </view>
 </view>
