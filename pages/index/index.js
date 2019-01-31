@@ -4,6 +4,10 @@ const app = getApp()
 
 Page({
   data: {
+    appId: 'wxfb91c44127dc7a17',
+    shopId: 98539213,
+    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
+    goodsGroupId: 105290598,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,

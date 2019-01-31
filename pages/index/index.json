@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "goods": "plugin://yzGoodsPlugin/goods"
+  }
 }

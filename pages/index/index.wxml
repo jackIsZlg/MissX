@@ -8,11 +8,16 @@
     </block>
   </view>
 
-  <goods 
-    app-id='wxf11c5910cb729a82'
-    shop-id='{{45694034}}'
-    layout='{{0}}'
+  <goods
+    app-id="{{ appId }}"
+    shop-id="{{ shopId }}"
+    open-id="{{ openId }}"
+    goods-group-id="{{ goodsGroupId }}"
+    layout="{{ 1 }}"
+    size-type="{{ 0 }}"
   />
+  
+  <view>12121</view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}11111</text>
   </view>
