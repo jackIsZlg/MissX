@@ -20,6 +20,10 @@ Page({
     })
   },
   onLoad: function () {
+    wx.navigateTo({
+      url: '../communityIntro/communityIntro'
+    })
+    return
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

@@ -1,0 +1,49 @@
+/* pages/communityIntro/communityIntro.wxss */
+page{
+   height:100%;
+   width: 100%;
+   background-size:cover; 
+    background-image: url('https://miss.xuanyantech.com/img/WeChat/communityIntro-bg.png');
+}
+.in-image{
+ display:flex;
+ width: 100%;
+ height: 100%;
+ 
+ justify-content: center;
+ align-items:center;
+}
+
+.award{
+  position: absolute;
+  top: 264rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650rpx;
+  height: 352rpx;
+  border-radius: 10rpx;
+  background-color: white;
+  padding: 45rpx;
+  box-sizing: border-box;
+}
+
+.award.top1{
+  top: 264rpx;
+}
+
+.award.top2{
+  top: 656rpx;
+}
+
+.award text{
+  display: block;
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.award p{
+  color: #999999;
+  font-size: 28rpx; 
+}

@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/shop/shop",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/communityIntro/communityIntro"
   ],
   "window":{
     "backgroundTextStyle":"light",
