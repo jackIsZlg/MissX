@@ -1,14 +1,40 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/shop/shop",
+    "pages/my/my"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  },  
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#333333",
+    "selectedColor": "#d93246",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "精选",
+        "iconPath": "img/index-no.png",
+        "selectedIconPath": "img/index.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "img/shop-no.png",
+        "selectedIconPath": "img/shop.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my-no.png",
+        "selectedIconPath": "img/my.png"
+      }
+    ]
+  },
   "plugins": {
     "yzGoodsPlugin": {
       "version": "0.6.5",
