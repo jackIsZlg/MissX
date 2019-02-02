@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/shop/shop",
     "pages/my/my",
-    "pages/communityIntro/communityIntro"
+    "pages/communityIntro/communityIntro",
+    "pages/communityEnter/communityEnter"
   ],
   "window":{
     "backgroundTextStyle":"light",

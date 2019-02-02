@@ -20,10 +20,10 @@ Page({
     })
   },
   onLoad: function () {
-    wx.navigateTo({
-      url: '../communityIntro/communityIntro'
-    })
-    return
+    // wx.navigateTo({
+    //   url: '../communityEnter/communityEnter'
+    // })
+    // return
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

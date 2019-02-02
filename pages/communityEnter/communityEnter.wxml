@@ -1,0 +1,21 @@
+<!--pages/communityEnter/communityEnter.wxml-->
+<view>
+   <view class='enter-content'>
+     <view class='intro'>
+        <view class='title'>社群介绍</view>
+        <p class='kong-p'>
+          MCN社群由各行业成功女性创业者发起组织，手把手教你如何创业、如何
+          打造个人品牌、如何自媒体运营、如何怎么设置流量变现。
+        </p>
+        <view class='title'>入社好处</view>
+        <p>1、免费体验产品领取；</p>
+        <p>2、教你制作视频；</p>
+        <p>3、教你如何种草；</p>
+        <p>4、联合平台帮你吸粉；</p>
+        <view class='title'>入社群须知</view>
+        <p>1、每一个人智能选择一个兴趣加入，后期可以免费更换社群；</p>
+        <p>2、加入社群需要699元，入群管理费；</p>
+     </view>
+     <view class='button'></view>
+   </view>
+</view>
