@@ -23,3 +23,11 @@
 .input-pla {
   color: #aeaeae;
 }
+.banner{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-banner1.png);
+   width: 750rpx;
+   height: 362rpx;
+   background-size: cover;
+   margin-top: 20rpx;
+   margin-bottom: 36rpx;
+}

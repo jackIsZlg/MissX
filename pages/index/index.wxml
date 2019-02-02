@@ -4,6 +4,7 @@
     <view class='qry-icon'></view>
     <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
   </view>
+  <view class='banner'></view>
   <goods
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
