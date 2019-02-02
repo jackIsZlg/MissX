@@ -5,6 +5,12 @@
     <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
   </view>
   <view class='banner'></view>
+  <view class='slide-title'>
+     <div class='active'>会员任务<span></span></div>
+     <div class='active'>热卖<span></span></div>
+     <div class='active'>新品上架<span></span></div>
+     <div class='active'>明星同款<span></span></div>
+  </view>
   <goods
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
