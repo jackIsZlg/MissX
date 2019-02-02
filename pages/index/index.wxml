@@ -1,13 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='qry'>
+    <view class='qry-icon'></view>
+    <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
   </view>
-
   <goods
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
@@ -16,9 +12,4 @@
     layout="{{ 1 }}"
     size-type="{{ 0 }}"
   />
-  
-  <view>12121</view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}11111</text>
-  </view>
 </view>

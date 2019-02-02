@@ -1,21 +1,25 @@
-/**index.wxss**/
-.userinfo {
+.qry{
+  width: 710rpx;
+  height: 62rpx;
+  background-color: #f7f7f7;
+  border-radius: 80rpx;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.qry .qry-icon{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-qry.png);
+  width: 28rpx;
+  height: 28rpx;
+  background-size: cover;
+  margin-left: 30rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.qry input{
+  width: 600rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  color: #aeaeae;
 }
-
-.usermotto {
-  margin-top: 200px;
+.input-pla {
+  color: #aeaeae;
 }
