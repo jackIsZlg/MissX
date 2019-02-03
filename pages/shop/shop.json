@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#fffafb",
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "goods": "plugin://yzGoodsPlugin/goods"
+  }
 }

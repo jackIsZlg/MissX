@@ -1,11 +1,19 @@
 // pages/shop/shop.js
+//获取应用实例
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    data: {
+      appId: 'wxfb91c44127dc7a17',
+      shopId: 98539213,
+      openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
+      goodsGroupId: 105290598,
+    },
   },
 
   /**

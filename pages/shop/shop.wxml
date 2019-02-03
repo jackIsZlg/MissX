@@ -1,2 +1,24 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+  <view class='shop_qry'>
+    <view class='qry'>
+      <view class='qry-icon'></view>
+      <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
+    </view>
+  </view>
+  <view class='shop_nav'>
+    <text class='active'>全部</text>
+    <text>美妆</text>
+    <text>护肤</text>
+    <text>洗护</text>
+    <text>首饰</text>
+  </view>
+  <view class='banner'></view>
+
+  <goods
+    app-id="{{ appId }}"
+    shop-id="{{ shopId }}"
+    open-id="{{ openId }}"
+    goods-group-id="{{ goodsGroupId }}"
+    layout="{{ 1 }}"
+    size-type="{{ 0 }}"
+  />

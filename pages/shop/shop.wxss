@@ -1,1 +1,29 @@
 /* pages/shop/shop.wxss */
+@import "../../pages/index/index.wxss";
+.shop_qry{
+  width:750rpx;
+  background: #fffafb;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 17rpx;
+}
+.banner{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/shop_banner.png);
+   height: 502rpx;
+   margin:0;
+}
+.shop_nav{
+  width:750rpx;
+  height: 90rpx;
+  background: #fffafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.shop_nav text{
+  font-size: 32rpx;
+  color: #999;
+}
+.shop_nav text.active{
+  color: #333;
+}
