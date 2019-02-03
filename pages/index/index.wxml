@@ -6,17 +6,24 @@
   </view>
   <view class='banner'></view>
   <view class='slide-title'>
-     <div class='active'>会员任务<span></span></div>
-     <div class='active'>热卖<span></span></div>
-     <div class='active'>新品上架<span></span></div>
-     <div class='active'>明星同款<span></span></div>
+     <div class="{{type==0?'active':''}}" data-num="0" bindtap="menuClick">
+     会员任务<span></span></div>
+     <div class="{{type==1?'active':''}}" data-num="1" bindtap="menuClick">
+     热卖<span></span></div>
+     <div class="{{type==2?'active':''}}" data-num="2" bindtap="menuClick">
+     新品上架<span></span></div>
+     <div class="{{type==3?'active':''}}" data-num="3" bindtap="menuClick">
+     明星同款<span></span></div>
   </view>
   <goods
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
     open-id="{{ openId }}"
     goods-group-id="{{ goodsGroupId }}"
-    layout="{{ 1 }}"
+    layout="{{ 6 }}"
     size-type="{{ 0 }}"
   />
+  <view class='seckill-tip'>
+    网速、手速不行就别瞎凑热闹，抢不到闹心
+  </view>
 </view>

@@ -4,10 +4,12 @@ const app = getApp()
 
 Page({
   data: {
+    type:0,
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
     openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
-    goodsGroupId: 105290598,
+    goodsGroupId: 105866329,
+    goodsList: [105866329,105290598, 105290599,105866362],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -50,6 +52,13 @@ Page({
         }
       })
     }
+  },
+  menuClick:function(e) {
+    let num = e.target.dataset.num;
+    this.setData({
+      type: e.target.dataset.num,
+      goodsGroupId: this.data.goodsList[num]
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
