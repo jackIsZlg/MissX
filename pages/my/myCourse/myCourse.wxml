@@ -1,0 +1,13 @@
+<!--pages/my/myCourse/myCourse.wxml-->
+<view class='myCourse'>
+  <view class='myCourse_list' 
+   wx:for='{{myCourse}}' wx:key='{{index}}'>
+    <view class='cover'>
+      <image src='{{item.cover}}'></image>
+    </view>
+    <view class='basic'>
+      <text>{{item.name}}</text>
+      <view>开始学习</view>
+    </view>
+  </view>
+</view>

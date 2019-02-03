@@ -1,0 +1,71 @@
+/* pages/my/myCoupon/myCoupon.wxss */
+page{
+  background: #fbfbfb;
+}
+.myCoupon_nav{
+  width: 100%;
+  height: 86rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+}
+.myCoupon_nav text{
+  width:175rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 80rpx;
+  border-bottom: 6rpx solid #fff;
+}
+.myCoupon_nav text.active{
+  color: #ffc4bf;
+  border-bottom: 6rpx solid #ffc4bf;
+}
+.myCoupon_box{
+  width:710rpx;
+  padding:0 20rpx;
+}
+.myCoupon_list{
+  width: 710rpx;
+  height: 176rpx;
+  background: url('https://miss.xuanyantech.com/img/WeChat/myCoupon_bg_light.png') no-repeat;
+  background-size: 100% 100%;
+  margin-top: 24rpx;
+  display: flex;
+}
+.myCoupon_list.invalid{
+  background: url('https://miss.xuanyantech.com/img/WeChat/myCoupon_bg_dark.png') no-repeat;
+  background-size: 100% 100%;
+}
+.coupon_amount_box{
+  width:207rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.coupon_amount{
+  font-size: 26rpx;
+}
+.coupon_amount text{
+  font-size: 60rpx;
+}
+.coupon_limit{
+  font-size: 24rpx;
+}
+.coupon_desc{
+  flex: 1;
+  padding: 24rpx 0 24rpx 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.coupon_desc text{
+  font-size: 26rpx;
+  color: #999;
+}
+.coupon_desc text.title{
+  color: #333;
+}

@@ -38,7 +38,7 @@
 </view>
 <view class='my_link'>
   <navigator class='my_link_list' hover-class='none'
-   wx:for='{{myLink2}}' wx:key='{{index}}'>
+   wx:for='{{myLink2}}' wx:key='{{index}}' url='{{item.url}}'>
     <image src='{{item.icon}}'></image>
     <text>{{item.name}}</text>
   </navigator>
