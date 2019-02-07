@@ -68,5 +68,47 @@
   height: 50rpx;
   line-height: 50rpx;
   font-size: 28rpx;
-  
+  background-color: #fffafb;
+  width: 100%;
+  text-align: center;
+  color: #ffc4c0;
 }
+
+.img-title{
+  width: 255rpx;
+  height: 100rpx;
+  margin: 90rpx 0 60rpx;
+}
+
+.youhuo{
+   width: 750rpx;
+   height: 404rpx;
+   margin-bottom: 66rpx;
+}
+
+.youhuo.banner0{
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo0.png);
+     background-size: cover;
+
+}
+
+
+.youhuo.banner1{
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo1.png);
+     background-size: cover;
+}
+
+.youhuo.banner2{
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo2.png);
+     background-size: cover;
+}
+
+.index-card{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-card.png);
+  background-size: cover;
+  width: 710rpx;
+  height: 410rpx;
+  margin: 10rpx auto 50rpx;
+}
+
+
