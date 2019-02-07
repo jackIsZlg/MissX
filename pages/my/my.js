@@ -21,9 +21,9 @@ Page({
     myLink2: [
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '邀请奖励', url: '' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon4.png`, name: '我的积分', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '返现', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon6.png`, name: '优惠券', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon7.png`, name: '课程', url: '' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '返现', url: '/pages/my/myBalance/myBalance' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon6.png`, name: '优惠券', url: '/pages/my/myCoupon/myCoupon' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon7.png`, name: '课程', url: '/pages/my/myCourse/myCourse' },
     ]
   },
 

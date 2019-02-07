@@ -1,0 +1,101 @@
+/* pages/my/myBalance/myBalance.wxss */
+page{
+  width: 750rpx;
+  height: 100%;
+}
+.myBalance{
+  width: 750rpx;
+  height: 100%;
+  position: relative;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.balance_total,.balance_detail{
+  width:710rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  overflow: hidden;
+  margin: 0 20rpx
+}
+.balance_total{
+  height: 290rpx;
+  margin:20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.balance_amount{
+  font-size: 28rpx;
+  color: #333;
+}
+.balance_amount text{
+  font-size: 70rpx;
+  color: #d6253a;
+}
+.balance_control{
+  display: flex;
+}
+.btn{
+  box-sizing: border-box;
+  width:174rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border-radius: 29rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 40rpx 13rpx;
+}
+.btn_red_hollow{
+  color: #d6253a;
+  border:1rpx solid #d6253a;
+}
+.btn_red_solid{
+  color: #fff;
+  background:#d6253a;
+}
+.balance_detail{
+  padding-bottom: 45rpx;
+}
+.detail_title{
+  height: 110rpx;
+  line-height: 102rpx;
+  font-size: 26rpx;
+  color: #333;
+  background: #fbfbfb;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+}
+.detail_list{
+  box-sizing: border-box;
+  padding:8rpx 20rpx 8rpx 30rpx;
+}
+.detail_list .detail{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 55rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.detail_list .detail text{
+  color: #d6253a;
+}
+.detail_list .time{
+  font-size: 24rpx;
+  color: #666;
+  line-height: 52rpx;
+}
+.load_complete{
+  font-size: 26rpx;
+  color: #666;
+  width: 100%;
+  text-align: center;
+  margin: 20rpx 0;
+}

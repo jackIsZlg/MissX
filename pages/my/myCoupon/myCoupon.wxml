@@ -1,0 +1,29 @@
+<!--pages/my/myCoupon/myCoupon.wxml-->
+<view class='myCoupon_nav'>
+  <text class='active'>优惠券</text>
+  <text>已失效</text>
+</view>
+<view class='myCoupon_box'>
+  <view class='myCoupon_list'>
+    <view class='coupon_amount_box'>
+      <view class='coupon_amount'><text>8</text>元</view>
+      <view class='coupon_limit'>满88减8</view>
+    </view>
+    <view class='coupon_desc'>
+      <text class='title'>新春快乐－8元</text>
+      <text>全场通用（特殊商品除外）</text>
+      <text>使用期限 01.22～02.30</text>
+    </view>
+  </view>
+  <view class='myCoupon_list invalid'>
+    <view class='coupon_amount_box'>
+      <view class='coupon_amount'><text>8</text>元</view>
+      <view class='coupon_limit'>满88减8</view>
+    </view>
+    <view class='coupon_desc'>
+      <text class='title'>新春快乐－8元</text>
+      <text>全场通用（特殊商品除外）</text>
+      <text>使用期限 01.22～02.30</text>
+    </view>
+  </view>
+</view>

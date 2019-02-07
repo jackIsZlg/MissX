@@ -1,0 +1,19 @@
+<!--pages/my/myBalance/myBalance.wxml-->
+<view class='myBalance'>
+  <image class='bg' src='https://miss.xuanyantech.com/img/WeChat/communityIntro-bg.png'></image>
+  <view class='balance_total'>
+    <view class='balance_amount'>可用余额<text>109</text>元</view>
+    <view class='balance_control'>
+      <text class='btn btn_red_hollow'>提现</text>
+      <text class='btn btn_red_solid'>去使用</text>
+    </view>
+  </view>
+  <view class='balance_detail'>
+    <view class='detail_title'>明细</view>
+    <view class='detail_list'>
+      <view class='detail'>零售利润或奖励分红<text>¥ 109元</text></view>
+      <view class='time'>2019年01月19日 10:08:04</view>
+    </view>
+  </view>
+  <view class='load_complete'>已全部加载完毕</view>
+</view>

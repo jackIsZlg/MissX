@@ -3,6 +3,9 @@
     "pages/index/index",
     "pages/shop/shop",
     "pages/my/my",
+    "pages/my/myBalance/myBalance",
+    "pages/my/myCoupon/myCoupon",
+    "pages/my/myCourse/myCourse",
     "pages/communityIntro/communityIntro",
     "pages/communityEnter/communityEnter"
   ],
