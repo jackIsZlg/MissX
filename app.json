@@ -7,7 +7,9 @@
     "pages/my/myCoupon/myCoupon",
     "pages/my/myCourse/myCourse",
     "pages/communityIntro/communityIntro",
-    "pages/communityEnter/communityEnter"
+    "pages/communityEnter/communityEnter",
+    "pages/address/editAddress/editAddress",
+    "pages/address/myAddress/myAddress"
   ],
   "window":{
     "backgroundTextStyle":"light",

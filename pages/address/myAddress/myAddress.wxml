@@ -1,0 +1,26 @@
+<view class='address'>
+   <view class='name-info'>
+     <text>Marry</text>
+     <text class='left'>186****9356</text>
+   </view>
+   <view class='add-detail'>山东省青岛市北区杭州湾跨海大桥270号</view>
+   <view class='operate'>
+      <span class='select'></span>
+      <span class='select-tip'>默认地址</span>
+     <view class='right'>
+        <view class='del'>
+          <span class='del-icon'></span>
+          <span class='icon'>删除</span>
+        </view>
+        <view class='edit'>
+          <span class='edit-icon'></span>
+          <span class='icon'>编辑</span>
+        </view>
+      </view>
+   </view>
+</view>
+
+<view class='address-bottom'>
+   <view class='wechat'></view>
+   <view class='newAdd'></view>
+</view>

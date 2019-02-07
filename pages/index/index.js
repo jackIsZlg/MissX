@@ -18,14 +18,10 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../address/myAddress/myAddress'
     })
   },
   onLoad: function () {
-    // wx.navigateTo({
-    //   url: '../communityEnter/communityEnter'
-    // })
-    // return
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
