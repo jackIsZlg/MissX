@@ -1,0 +1,107 @@
+page{
+  background-color: #f4f4f7;
+}
+
+.address{
+  background-color: white;
+  margin: 24rpx auto;
+  width: 710rpx;
+  height: 224rpx;
+  padding: 28rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.name-info{
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.name-info .left{
+  margin-left: 50rpx;
+}
+
+.add-detail{
+  color: #999;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  padding-bottom: 14rpx;
+  border-bottom: 1rpx solid #f2f2f2; 
+}
+
+.operate{
+  font-size: 28rpx;
+   color: #333;
+} 
+
+.operate span{
+  display: inline-block;
+}
+
+.operate .select{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/address-select.png);
+   background-size: cover;
+   width: 25rpx;
+   height: 25rpx;
+   display: inline-block;
+   margin-top: 20rpx;
+   margin-right: 14rpx;
+}
+
+.operate .right{
+  float: right;
+  display: inline-block;
+  margin-top: 20rpx;
+}
+
+.operate .right .edit,.operate .right .del{
+   display: inline-block;
+}
+.operate .right .edit{
+  margin-left: 22rpx;
+}
+
+.operate .right .edit .edit-icon{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/address-edit.png);
+   background-size: cover;
+   width: 25rpx;
+   height: 25rpx;
+   display: inline-block;
+   margin-right: 20rpx;
+}
+
+.operate .right .del .del-icon{
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/address-del.png);
+   background-size: cover;
+   width: 25rpx;
+   height: 25rpx;
+   display: inline-block;
+   margin-right: 20rpx;
+}
+
+.address-bottom{
+  position: fixed;
+  bottom: 0;
+  height: 118rpx;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-bottom .wechat{
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/address-wechat.png);
+   background-size: cover;
+  width: 334rpx;
+  height: 84rpx;
+  margin-right: 30rpx;
+}
+
+.address-bottom .newAdd{
+       background-image: url(https://miss.xuanyantech.com/img/WeChat/address-add.png);
+   background-size: cover;
+  width: 334rpx;
+  height: 84rpx;
+}
+

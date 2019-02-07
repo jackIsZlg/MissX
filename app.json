@@ -8,7 +8,9 @@
     "pages/my/myCourse/myCourse",
     "pages/cart/cart",
     "pages/communityIntro/communityIntro",
-    "pages/communityEnter/communityEnter"
+    "pages/communityEnter/communityEnter",
+    "pages/address/editAddress/editAddress",
+    "pages/address/myAddress/myAddress"
   ],
   "window":{
     "backgroundTextStyle":"light",
