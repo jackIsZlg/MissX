@@ -21,4 +21,8 @@
     goods-group-id="{{ goodsGroupId }}"
     layout="{{ 1 }}"
     size-type="{{ 0 }}"
+    open-cart
+    redirect-type="3"
+    bind:item-click="handleGoodsClick"
+    bind:buy="handleGoodsClick"
   />

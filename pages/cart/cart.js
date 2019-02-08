@@ -1,7 +1,4 @@
-// pages/shop/shop.js
-//获取应用实例
-const app = getApp()
-
+// pages/cart/cart.js
 Page({
 
   /**
@@ -10,8 +7,7 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
-    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
-    goodsGroupId: 105290598,
+    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo'
   },
 
   /**
@@ -70,10 +66,17 @@ Page({
 
   },
 
-  handleGoodsClick: function(e){
-    const { detail } = e;
+  goBuy({ detail: { bookKey } }) {
+    const { openId, appId, shopId } = this.data;
     wx.navigateTo({
-      url: `plugin://yzTradePlugin/goods-detail?goodsId=${detail.alias}&openId=${this.data.openId}&shopId=${this.data.shopId}&appId=${this.data.appId}`
-    })
+      url: `plugin://yzTradePlugin/buy?bookKey=${bookKey}&openId=${openId}&appId=${appId}&shopId=${shopId}`
+    });
+  },
+
+  goGoodsDetail({ detail: { goodsId } }) {
+    const { openId, appId, shopId } = this.data;
+    wx.navigateTo({
+      url: `plugin://yzTradePlugin/goods-detail?goodsId=${goodsId}&openId=${openId}&appId=${appId}&shopId=${shopId}`
+    });
   }
 })

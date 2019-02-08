@@ -16,7 +16,7 @@ Page({
     ],
     myLink1:[
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon1.png`,name:'收货地址',url:''},
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '' }
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '/pages/cart/cart' }
     ],
     myLink2: [
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '邀请奖励', url: '' },
