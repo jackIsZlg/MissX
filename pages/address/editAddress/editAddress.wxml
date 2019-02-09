@@ -1,3 +1,40 @@
 <view>
-  
+  <view class='edit-top'>
+    <view class='edit-img'></view>
+    <text>获取微信收货地址</text>
+    <view class='icon-right'></view>
+  </view>
+
+  <view class='edit-input'>
+    <view class='edit-cn'>
+        <text>姓名</text>
+        <input placeholder='收货人姓名'></input>
+    </view>
+  </view>
+
+  <view class='edit-input'>
+    <view class='edit-cn'>
+        <text>电话</text>
+        <input placeholder='收货人手机号'></input>
+    </view>
+  </view>
+
+  <view class='edit-input'>
+    <view class='edit-cn'>
+        <text>地区</text>
+        <input placeholder='选择省/市/区'></input>
+    </view>
+  </view>
+
+  <view class='edit-input'>
+    <view class='edit-cn'>
+        <text>详细地址</text>
+        <input placeholder='街道门牌、楼层房间号等信息'></input>
+    </view>
+  </view>
+
+  <view class='auto-address'>智能识别地址</view>
+
+  <view class='address-save'></view>
+
 </view>

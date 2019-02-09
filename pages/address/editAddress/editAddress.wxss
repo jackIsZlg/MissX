@@ -1,3 +1,81 @@
 page{
   background-color: #f8f9fa;
 }
+
+.edit-top{
+  height: 86rpx;
+  background-color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  position: relative;
+}
+
+.edit-top .edit-img{
+  background-image: url('https://miss.xuanyantech.com/img/WeChat/address-wechat.png');
+  background-size: cover;
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+
+.icon-right{
+  background-image: url('https://miss.xuanyantech.com/img/WeChat/myCenter_link_arrow.png');
+  width: 13rpx;
+  height: 24rpx;
+  background-size: cover;
+  position: absolute;
+  right: 32rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.edit-input{
+  height: 108rpx;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.edit-input .edit-cn{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+
+.edit-input:last-child .edit-cn{
+  border: none;
+}
+
+.edit-input .edit-cn text{
+  margin-left: 16rpx;
+  color: #333;
+  display: inline-block;
+  width: 150rpx;
+}
+
+.edit-input .edit-cn input{
+  height: 80rpx;
+  width: 500rpx;
+}
+
+.auto-address{
+  font-size: 28rpx;
+  color: rgba(90, 140, 239, 0.6);
+  margin: 80rpx 0 96rpx;
+  text-align: right;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.address-save{
+  background-image: url('https://miss.xuanyantech.com/img/WeChat/address-save.png');
+  background-size: cover;
+  width: 710rpx;
+  height: 110rpx;
+  margin: 0 auto;
+}
+
