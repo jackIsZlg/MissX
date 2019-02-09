@@ -6,6 +6,7 @@
     "pages/my/myBalance/myBalance",
     "pages/my/myCoupon/myCoupon",
     "pages/my/myCourse/myCourse",
+    "pages/cart/cart",
     "pages/communityIntro/communityIntro",
     "pages/communityEnter/communityEnter",
     "pages/address/editAddress/editAddress",
@@ -54,6 +55,10 @@
     "yzTradePlugin": {
       "version": "0.7.0",
       "provider": "wxef2db03c377b0016"
+    },
+    "yzCartPlugin": {
+      "version": "1.0.0",
+      "provider": "wx10ed5d6fd4792bfe"
     }
   }
 }
