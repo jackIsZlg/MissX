@@ -5,6 +5,7 @@
   border-radius: 80rpx;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 .qry .qry-icon{
   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-qry.png);
@@ -77,7 +78,8 @@
 .img-title{
   width: 255rpx;
   height: 100rpx;
-  margin: 90rpx 0 60rpx;
+  margin: 90rpx auto 60rpx;
+  display:block;
 }
 
 .youhuo{

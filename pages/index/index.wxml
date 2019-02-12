@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view>
   <view class='qry'>
     <view class='qry-icon'></view>
     <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
@@ -27,13 +27,15 @@
     网速、手速不行就别瞎凑热闹，抢不到闹心
   </view>
   <image class='img-title' src='https://miss.xuanyantech.com/img/WeChat/index-title1.png'></image>
-  <seckill
-    app-id="{{ appId }}"
-    shop-id="{{ shopId }}"
-    open-id="{{ openId }}"
-    layout="{{ 1 }}"
-    seckill-ids="449972016,449972918,449971428,449972146"
-  />
+  <view>
+      <seckill
+      app-id="{{ appId }}"
+      shop-id="{{ shopId }}"
+      open-id="{{ openId }}"
+      layout="{{ 0 }}"
+      seckill-ids="786320"
+    />
+  </view>
   <view class='seckill-tip'>
     就这价格还不出手，等降价我怕你是只能白头到老了
   </view>
