@@ -7,6 +7,7 @@ Page({
     type:0,
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
+    extraData: getApp().globalData.extraData,
     openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
     goodsGroupId: 105866329,
     goodsList: [105866329,105290598, 105290599,105866362],
@@ -62,6 +63,12 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  handleGoodsClick: function (e) {
+    const { detail } = e;
+    wx.navigateTo({
+      url: `/packages/trade/index?pageType=goods-detail&alias=${detail.alias}&openId=${this.data.openId}`
     })
   }
 })

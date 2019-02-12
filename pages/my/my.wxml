@@ -21,11 +21,11 @@
     <text>查看全部订单</text>
   </view>
   <view class='my_order_body'>
-    <navigator class='my_order_list' hover-class='none'
-   wx:for='{{myOrder}}' wx:key='{{index}}' url='{{item.url}}'>
+    <view class='my_order_list' hover-class='none'
+   wx:for='{{myOrder}}' wx:key='{{index}}' url='{{item.url}}' bindtap='orderList'>
       <image src='{{item.icon}}'></image>
       <text>{{item.name}}</text>
-    </navigator>
+    </view>
   </view>
 </view>
 
