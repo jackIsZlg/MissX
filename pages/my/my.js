@@ -8,11 +8,15 @@ Page({
    * 页面的初始数据
    */
   data: {
+    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
+    orderType: [
+      'all', 'topay', 'tosend', 'send', 'sign'//全部订单，代付款，待发货，已发货，已完成
+    ],
     myOrder:[
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order1.png`, name: '待付款', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order2.png`, name: '待发货', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order3.png`, name: '已发货', url: '' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order4.png`, name: '已完成', url: '' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order1.png`, name: '待付款', url: 'plugin://yzTradePlugin/order-list?type=WAIT_BUYER_PAY&openId=oDpvq0LNzwhMGfiNRbq-NthY5oUo&shopId=98539213&appId=wxfb91c44127dc7a17' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order2.png`, name: '待发货', url: 'plugin://yzTradePlugin/order-list?type=all&openId=oDpvq0LNzwhMGfiNRbq-NthY5oUo&shopId=98539213&appId=wxfb91c44127dc7a17' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order3.png`, name: '已发货', url: 'plugin://yzTradePlugin/order-list?type=all&openId=oDpvq0LNzwhMGfiNRbq-NthY5oUo&shopId=98539213&appId=wxfb91c44127dc7a17' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order4.png`, name: '已完成', url: 'plugin://yzTradePlugin/order-list?type=all&openId=oDpvq0LNzwhMGfiNRbq-NthY5oUo&shopId=98539213&appId=wxfb91c44127dc7a17' },
     ],
     myLink1:[
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon1.png`,name:'收货地址',url:''},
@@ -81,5 +85,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  orderList: function (e) {
+    wx.navigateTo({
+      url: `/packages/trade/index?pageType=order&type=topay&openId=${this.data.openId}`
+    })
   }
 })
