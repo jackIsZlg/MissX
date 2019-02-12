@@ -11,11 +11,11 @@ page{
   position: relative;
 }
 
-.edit-top .edit-img{
+.edit-img{
   background-image: url('https://miss.xuanyantech.com/img/WeChat/address-wechat.png');
   background-size: cover;
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 32rpx;
   display: inline-block;
   margin-left: 30rpx;
   margin-right: 20rpx;
