@@ -90,6 +90,13 @@ Page({
       goodsGroupId: this.data.goodsList[num]
     })
   },
+  menuClick:function(e) {
+    let num = e.target.dataset.num;
+    this.setData({
+      type: e.target.dataset.num,
+      goodsGroupId: this.data.goodsList[num]
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
