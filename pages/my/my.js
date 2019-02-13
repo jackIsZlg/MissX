@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo',
+    openId: wx.getStorageSync('loginInfo').openid,
     orderType: [
       'all', 'topay', 'tosend', 'send', 'sign'//全部订单，代付款，待发货，已发货，已完成
     ],
@@ -35,7 +35,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
