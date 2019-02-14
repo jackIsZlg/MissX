@@ -91,7 +91,7 @@ page{
 }
 
 .address-bottom .wechat{
-     background-image: url(https://miss.xuanyantech.com/img/WeChat/address-wechat.png);
+     background-image: url(https://miss.xuanyantech.com/img/WeChat/address-wechatA.png);
    background-size: cover;
   width: 334rpx;
   height: 84rpx;

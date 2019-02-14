@@ -7,14 +7,16 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
-    openId: 'oDpvq0LNzwhMGfiNRbq-NthY5oUo'
+    openId: wx.getStorageSync('loginInfo').openid
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      openId: wx.getStorageSync('loginInfo').openid
+    })
   },
 
   /**

@@ -22,5 +22,5 @@
 
 <view class='address-bottom'>
    <view class='wechat'></view>
-   <view class='newAdd'></view>
+   <view class='newAdd' bindtap='bindViewTap'></view>
 </view>
