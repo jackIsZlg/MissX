@@ -10,7 +10,7 @@ Page({
     extraData: getApp().globalData.extraData,
     openId: '',
     goodsGroupId: 105866329,
-    goodsList: [105866329,105290598, 105290599,105866362],
+    goodsList: [105866329, 105290599, 105866361, 105866362],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,

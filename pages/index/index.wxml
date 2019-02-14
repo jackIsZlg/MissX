@@ -63,7 +63,7 @@
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
     open-id="{{ openId }}"
-    goods-group-id="{{ goodsGroupId }}"
+    goods-group-id="{{ 105927834 }}"
     layout="{{ 6 }}"
     size-type="{{ 0 }}"
     open-cart
@@ -78,7 +78,7 @@
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
     open-id="{{ openId }}"
-    goods-group-id="{{ goodsGroupId }}"
+    goods-group-id="{{ 105927849 }}"
     layout="{{ 6 }}"
     size-type="{{ 0 }}"
     open-cart
@@ -93,7 +93,7 @@
     app-id="{{ appId }}"
     shop-id="{{ shopId }}"
     open-id="{{ openId }}"
-    goods-group-id="{{ goodsGroupId }}"
+    goods-group-id="{{ 105927870 }}"
     layout="{{ 6 }}"
     size-type="{{ 0 }}"
     open-cart

@@ -6,11 +6,11 @@
     </view>
   </view>
   <view class='shop_nav'>
-    <text class='active'>全部</text>
-    <text>美妆</text>
-    <text>护肤</text>
-    <text>洗护</text>
-    <text>首饰</text>
+    <text class="{{type==0?'active':''}}" data-num="0" bindtap="menuClick">全部</text>
+    <text class="{{type==1?'active':''}}" data-num="1" bindtap="menuClick">美妆</text>
+    <text class="{{type==2?'active':''}}" data-num="2" bindtap="menuClick">护肤</text>
+    <text class="{{type==3?'active':''}}" data-num="3" bindtap="menuClick">洗护</text>
+    <text class="{{type==4?'active':''}}" data-num="4" bindtap="menuClick">首饰</text>
   </view>
   <view class='banner'></view>
 

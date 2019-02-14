@@ -11,7 +11,9 @@ Page({
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
     openId: wx.getStorageSync('loginInfo').openid,
-    goodsGroupId: 105290598,
+    type: 0,
+    goodsList: [105929740,105927889,105927900,105927907,105927914],
+    goodsGroupId: 105929740,
   },
 
   /**
@@ -71,11 +73,18 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  // 菜单选择 
+  menuClick: function (e) {
+    let num = e.target.dataset.num;
+    this.setData({
+      type: e.target.dataset.num,
+      goodsGroupId: this.data.goodsList[num]
+    })
+  },
   handleGoodsClick: function(e){
     const { detail } = e;
     wx.navigateTo({
-      url: `plugin://yzTradePlugin/goods-detail?goodsId=${detail.alias}&openId=${this.data.openId}&shopId=${this.data.shopId}&appId=${this.data.appId}`
+      url: `/packages/trade/index?pageType=goods-detail&alias=${detail.alias}&openId=${this.data.openId}`
     })
   }
 })
