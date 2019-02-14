@@ -1,0 +1,107 @@
+/* pages/my/myPoints/myPoints.wxss */
+.myPoints{
+  width: 710rpx;
+  padding: 0 20rpx;
+}
+.myPoints_box{
+  width: 710rpx;
+  height: 410rpx;
+  background: url('https://miss.xuanyantech.com/img/WeChat/myPoints_bg.png') no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding:33rpx 25rpx;
+  margin: 18rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.person_info{
+  display: flex;
+
+}
+.head{
+  width: 122rpx;
+  height: 122rpx;
+  margin-right: 19rpx;
+}
+.name_rank{
+  height: 122rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.name{
+  font-size: 32rpx;
+  color: #fff;
+}
+.rank{
+  width: 121rpx;
+  height: 49rpx;
+  background: url('https://miss.xuanyantech.com/img/WeChat/myPoints_rank_bg.png') no-repeat;
+  background-size: 100% 100%;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  line-height: 29rpx;
+  box-sizing: border-box;
+  padding: 16rpx 0 0 30rpx;
+}
+.points_info{
+  height: 51rpx;
+  line-height: 51rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #fff;
+}
+.points_info text.total{
+  font-size: 48rpx;
+}
+.myPoints_detail{
+  width:710rpx;
+}
+.title{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666;
+}
+.title image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 16rpx;
+}
+.points_box{
+  width: 710rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.points_list{
+  width: 710rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: table;
+  font-size: 24rpx;
+  color: #999;
+  box-sizing: border-box;
+  border: 1rpx solid #eee;
+  border-bottom: none;
+}
+.points_list text{
+  display:table-cell;
+  text-align: center;
+}
+.points_list .red{
+  color: #ffc4bf;
+}
+.more{
+  width: 710rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 26rpx;
+  background: #eee;
+  color: #999;
+  text-align: center;
+}
+

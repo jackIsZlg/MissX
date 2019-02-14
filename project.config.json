@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -57,6 +57,12 @@
 					"id": 2,
 					"name": "address",
 					"pathName": "pages/address/editAddress/editAddress",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "myPoints",
+					"pathName": "pages/my/myPoints/myPoints",
 					"query": ""
 				}
 			]

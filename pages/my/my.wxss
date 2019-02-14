@@ -130,3 +130,18 @@ page{
   font-size: 26rpx;
   color: #999;
 }
+button::after{
+border:none;
+}
+button {
+  background-color: transparent;
+  border-radius:0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-align: left;
+}
+.btn-hover{
+  background-color: transparent;
+}

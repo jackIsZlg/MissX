@@ -46,7 +46,7 @@ page{
   box-sizing: border-box;
   width:174rpx;
   height: 58rpx;
-  line-height: 58rpx;
+  line-height: 56rpx;
   border-radius: 29rpx;
   overflow: hidden;
   font-size: 28rpx;

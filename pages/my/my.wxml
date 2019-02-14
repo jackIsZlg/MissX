@@ -1,10 +1,27 @@
 <!--pages/my/my.wxml-->
+<block wx:if='{{!hasUserInfo}}'>
 <view class='my_info'>
   <view class='my_head'>
     <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_defaultHead.png'></image>
   </view>
   <view class='my_basic'>
-    <text class='my_name'>李聃</text>
+    <button class='my_name' hover-class="btn-hover"
+      open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击显示微信头像</button>
+    <view class='my_grade'>
+      <view>积分等级</view>
+      <text>* * * *</text>
+    </view>
+  </view>
+</view>
+</block>
+
+<block wx:else>
+<view class='my_info'>
+  <view class='my_head'>
+    <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class='my_basic'>
+    <text class='my_name'>{{userInfo.nickName}}</text>
     <view class='my_grade'>
       <view>积分等级</view>
       <text>Lv 8</text>
@@ -14,6 +31,8 @@
     <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_communityBtn.png'></image>
   </view>
 </view>
+</block>
+
 
 <view class='my_order'>
   <view class='my_order_title'>

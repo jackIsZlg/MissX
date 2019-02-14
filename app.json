@@ -6,6 +6,7 @@
     "pages/my/myBalance/myBalance",
     "pages/my/myCoupon/myCoupon",
     "pages/my/myCourse/myCourse",
+    "pages/my/myPoints/myPoints",
     "pages/cart/cart",
     "pages/communityIntro/communityIntro",
     "pages/communityEnter/communityEnter",

@@ -1,0 +1,35 @@
+<!--pages/my/myPoints/myPoints.wxml-->
+<view class='myPoints'>
+  <view class='myPoints_box'>
+    <view class='person_info'>
+      <image class='head' src="{{userInfo.avatarUrl}}"></image>
+      <view class='name_rank'>
+        <text class='name'>{{userInfo.nickName}}</text>
+        <view class='rank'>Lv 8</view>
+      </view>
+    </view>
+    <view class='points_info'>
+      <view>
+        积分：<text class='total'>12345</text>
+      </view>
+      <view>
+        升级还差261成长值
+      </view>
+    </view>
+  </view>
+  <view class='myPoints_detail'>
+    <view class='title'>
+      <image src='https://miss.xuanyantech.com/img/WeChat/myPoints_icon.png'></image>
+      <text>积分明细</text>
+    </view>
+    <view class='points_box'>
+      <view class='points_list'>
+        <text>2018.10.12</text>
+        <text>12:35:35</text>
+        <text>消费奖励</text>
+        <text class='red'>+100</text>
+      </view>
+      <view class='more'>查看更多</view>
+    </view>
+  </view>
+</view>
