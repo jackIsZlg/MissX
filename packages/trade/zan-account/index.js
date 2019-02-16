@@ -2,18 +2,18 @@ const app = getApp();
 
 Page({
   data: {
-    alias: 's4ftrie81',
-    nodes: '&lt;zan-account<br><span style="margin-left: 10px;"></span>'
-      + 'app-id="wxf11c5910cb729a82"<br><span style="margin-left: 10px;"></span>'
-      + 'open-id="wxopenid"<br><span style="margin-left: 10px;"></span>'
-      + 'shop-id="{{ 45694034 }}"<br><span style="margin-left: 10px;"></span>'
-      + 'show-login="{{ true }}"<br><span style="margin-left: 10px;"></span>'
-      + 'bind:success="handleBindSuccess"<br>/&gt;',
+    appId: 'wxfb91c44127dc7a17',
+    shopId: 98539213,
+    openId: wx.getStorageSync('loginInfo').openid,
     extraData: app.globalData.extraData,
-    showLogin: false
+    showLogin: true
   },
 
   onLoad: function() {
+    console.log(wx.getStorageSync('loginInfo').openid)
+    this.setData({
+      openId: wx.getStorageSync('loginInfo').openid
+    })
   },
 
   handleShowZanAccount() {

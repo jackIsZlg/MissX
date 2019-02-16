@@ -94,6 +94,11 @@ Page({
   onShareAppMessage: function () {
 
   },
+  goToMyCenter:function(){
+    wx.navigateTo({
+      url: '/pages/communityEnter/communityEnter'
+    })
+  },
   orderList: function (e) {
     let type = e.currentTarget.dataset.type;
     console.log(type)

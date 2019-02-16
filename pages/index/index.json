@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "Miss X",
   "usingComponents": {
     "seckill": "plugin://yzGoodsPlugin/seckill",
     "goods": "plugin://yzGoodsPlugin/goods",

@@ -64,5 +64,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 先绑定手机号
+  buyCommunity:function(){
+    wx.navigateTo({
+      url: '/packages/trade/zan-account/index'
+    })
   }
 })

@@ -27,7 +27,7 @@
       <text>Lv 8</text>
     </view>
   </view>
-  <view class='my_community'>
+  <view class='my_community' bindtap='goToMyCenter'>
     <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_communityBtn.png'></image>
   </view>
 </view>
@@ -35,7 +35,7 @@
 
 
 <view class='my_order'>
-  <view class='my_order_title'>
+  <view class='my_order_title' bindtap='orderList' data-type='all'>
     <text>我的订单</text>
     <text>查看全部订单</text>
   </view>

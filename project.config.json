@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +64,19 @@
 					"name": "myPoints",
 					"pathName": "pages/my/myPoints/myPoints",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "communityEnter",
+					"pathName": "pages/communityEnter/communityEnter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zan-account/index",
+					"pathName": "packages/trade/zan-account/index",
+					"scene": null
 				}
 			]
 		}

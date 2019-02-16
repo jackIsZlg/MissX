@@ -16,6 +16,6 @@
         <p>1、每一个人智能选择一个兴趣加入，后期可以免费更换社群；</p>
         <p>2、加入社群需要699元，入群管理费；</p>
      </view>
-     <view class='button'></view>
+     <view class='button' bindtap='buyCommunity'></view>
    </view>
 </view>
