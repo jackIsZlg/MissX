@@ -66,16 +66,24 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "communityEnter",
-					"pathName": "pages/communityEnter/communityEnter",
+					"id": 4,
+					"name": "communitySelect",
+					"pathName": "pages/community/communitySelect/communitySelect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "communityPay",
+					"pathName": "pages/community/communityPay/communityPay",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "zan-account/index",
-					"pathName": "packages/trade/zan-account/index",
+					"name": "myCoupon",
+					"pathName": "pages/my/myCoupon/myCoupon",
+					"query": "",
 					"scene": null
 				}
 			]

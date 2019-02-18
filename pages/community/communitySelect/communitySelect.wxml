@@ -1,0 +1,22 @@
+<view class='select'>
+  <view class='title'>请填写个人信息</view>
+  <view class='input-view top'>
+     <view class='name'><span>姓名</span>：</view>
+     <view class='name'><input placeholder="" /></view>
+  </view>
+  <view class='input-view'>
+     <view class='name'><span>手机号</span>：</view>
+     <view class='name'><input placeholder="" /></view>
+  </view>
+  <view class='input-view'>
+     <view class='name'><span>社群</span>：</view>
+     <view class='name'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+        </picker>
+     </view>
+  </view>
+  <view class='button'></view>
+</view>

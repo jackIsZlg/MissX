@@ -96,7 +96,7 @@ Page({
   },
   goToMyCenter:function(){
     wx.navigateTo({
-      url: '/pages/communityEnter/communityEnter'
+      url: '/pages/community/communityEnter/communityEnter'
     })
   },
   orderList: function (e) {

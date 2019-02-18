@@ -1,0 +1,7 @@
+<view class='select'>
+  <view class='title'>美装社群</view>
+  <view>
+     <!-- <view class='image-bg'></view> -->
+     <image src='' class='image-bg'></image>
+  </view>
+</view>

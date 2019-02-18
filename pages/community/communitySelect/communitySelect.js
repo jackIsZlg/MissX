@@ -1,32 +1,19 @@
-// pages/my/myCoupon/myCoupon.js
+// pages/community/communitySelect/communitySelect.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    appId: 'wxfb91c44127dc7a17',
-    shopId: 98539213,
-    openId: '',
+    array: [' ','美国', '中国', '巴西', '日本'],
+    index: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://open.youzan.com/api/oauthentry/youzan.ump.promocard.buyer/3.0.1/search',
-      data: {
-        open_user_id: wx.getStorageSync('loginInfo').openid
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      method: 'get',
-      success(res) {
-        //console.log(res.data)
-      }
-    })
+
   },
 
   /**

@@ -8,8 +8,10 @@
     "pages/my/myCourse/myCourse",
     "pages/my/myPoints/myPoints",
     "pages/cart/cart",
-    "pages/communityIntro/communityIntro",
-    "pages/communityEnter/communityEnter",
+    "pages/community/communityIntro/communityIntro",
+    "pages/community/communityEnter/communityEnter",
+    "pages/community/communitySelect/communitySelect",
+    "pages/community/communityPay/communityPay",
     "pages/address/editAddress/editAddress",
     "pages/address/myAddress/myAddress"
   ],
@@ -94,6 +96,6 @@
     }
   },
   "navigateToMiniProgramAppIdList": [
-    "wxf11c5910cb729a82"
+    "wxfb91c44127dc7a17"
   ]
 }
