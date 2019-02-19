@@ -60,8 +60,8 @@ page{
   width: 586rpx;
   height: 110rpx;
   background-color: red;
-  /* background: url('');
-  background-size: cover; */
+  background: url('https://miss.xuanyantech.com/img/WeChat/communitySelect.png');
+  background-size: cover;
   margin: 114rpx auto 80rpx; 
 }
 

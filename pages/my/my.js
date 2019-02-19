@@ -23,13 +23,13 @@ Page({
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '/pages/cart/cart' }
     ],
     myLink2: [
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '邀请奖励', url: '/pages/communityIntro/communityIntro' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '邀请奖励', url: '/pages/community/communityIntro/communityIntro' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon4.png`, name: '我的积分', url: '/pages/my/myPoints/myPoints' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '返现', url: '/pages/my/myBalance/myBalance' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon6.png`, name: '优惠券', url: '/pages/my/myCoupon/myCoupon' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon7.png`, name: '课程', url: '/pages/my/myCourse/myCourse' },
     ],
-
+    flag: wx.getStorageSync('loginInfo').flag,
     userInfo: null,
     hasUserInfo: false
   },
@@ -38,6 +38,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      flag: wx.getStorageSync('loginInfo').flag,
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -93,6 +96,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toLink:function(e){
+    let url = e.currentTarget.dataset.url;
+    //积分和优惠券要绑定手机号
+    if (url.indexOf('myPoints') > 0 || url.indexOf('myCoupon') > 0){
+      console.log(this.data.flag)
+      if (!this.data.flag) {
+        wx.navigateTo({
+          url: '/packages/trade/zan-account/index?from=my'
+        })
+        return;
+      }
+    }
+    wx.navigateTo({
+      url: url
+    })
   },
   goToMyCenter:function(){
     wx.navigateTo({
