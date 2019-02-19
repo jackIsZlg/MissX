@@ -38,6 +38,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(11111)
     this.setData({
       flag: wx.getStorageSync('loginInfo').flag,
     })
@@ -101,8 +102,7 @@ Page({
     let url = e.currentTarget.dataset.url;
     //积分和优惠券要绑定手机号
     if (url.indexOf('myPoints') > 0 || url.indexOf('myCoupon') > 0){
-      console.log(this.data.flag)
-      if (!this.data.flag) {
+      if (!wx.getStorageSync('loginInfo').flag) {
         wx.navigateTo({
           url: '/packages/trade/zan-account/index?from=my'
         })
