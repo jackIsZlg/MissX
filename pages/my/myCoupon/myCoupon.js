@@ -109,6 +109,8 @@ Page({
         let cards = res.data.result.cards.map((val,index,arr)=>{
           // value优惠面额（单位：分）
           val.value = val.value / 100;
+          // 领取到的折扣值（88，8.8折）
+          val.discount = val.discount /10;
           // 卡券有效开始时间(UTC时间格式)
           val.valid_start_at = that.timeFormat(val.valid_start_at).split(" ")[0];
           // 卡券有效过期时间
