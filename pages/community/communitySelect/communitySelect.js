@@ -5,8 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [' ','美国', '中国', '巴西', '日本'],
-    index: 1
+    array: ['美妆社区', '护肤社区', '洗护社区', '首饰社区'],
+    index: 1,
+    openid: '', 
+    name: '',
+    mobile: '',
+    groupName: '',
   },
 
   /**
@@ -63,5 +67,55 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindNameInput(e){
+    this.setData({
+      name: e.detail.value
+    })
+  },
+  bindPhoneInput(e){
+    this.setData({
+      mobile: e.detail.value
+    })
+  },
+  enterGroup(){
+    let that = this;
+    if (!this.data.name){
+      wx.showModal({
+        title: '提示',
+        content: '姓名不能为空',
+        showCancel: false,
+        success(res) {
+        }
+      })
+      return;
+    } else if (!this.data.mobile){
+      wx.showModal({
+        title: '提示',
+        content: '手机号不能为空',
+        showCancel: false,
+        success(res) {  
+        }
+      })
+      return;
+    }
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/web/save-group',
+      data: {
+        openid: wx.getStorageSync('loginInfo').openid,
+        name: this.data.name,
+        mobile: this.data.mobile,
+        groupName: this.data.array[this.data.index]
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        wx.redirectTo({
+          url: '/pages/community/communityPay/communityPay'
+        })
+      }
+    })
   }
 })

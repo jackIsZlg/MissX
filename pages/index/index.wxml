@@ -38,7 +38,7 @@
       shop-id="{{ shopId }}"
       open-id="{{ openId }}"
       layout="{{ 0 }}"
-      seckill-ids="786320"
+      seckill-ids="786240,786320"
     />
   </view>
   <view class='seckill-tip'>
@@ -52,7 +52,7 @@
       open-id="{{ openId }}"
       size="2"
       goods-source="0"
-      activity-ids="982152"
+      activity-ids="{{ zutuanId }}"
   />
   <image class='img-title'
    src='https://miss.xuanyantech.com/img/WeChat/index-title3.png'></image>
