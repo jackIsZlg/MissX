@@ -11,6 +11,8 @@ Page({
     openId: '',
     goodsGroupId: 105866329,
     goodsList: [105866329, 105290599, 105866361, 105866362],
+    zutuanId: '', // 组团Id
+    miaoshaId: '',  // 秒杀Id
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -23,39 +25,49 @@ Page({
     })
   },
   onLoad: function () {
+    this.getActivityId(1); //组团
+    this.getActivityId(2); //秒杀
     if (!wx.getStorageSync('loginInfo')) {
       this.getOpenId();
     } else {
       this.setData({
         openId: wx.getStorageSync('loginInfo').openid
       })
-    } 
-    // if (app.globalData.userInfo) {
-    //   this.setData({
-    //     userInfo: app.globalData.userInfo,
-    //     hasUserInfo: true
-    //   })
-    // } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-    //   app.userInfoReadyCallback = res => {
-    //     this.setData({
-    //       userInfo: res.userInfo,
-    //       hasUserInfo: true
-    //     })
-    //   }
-    // } else {
-    //   // 在没有 open-type=getUserInfo 版本的兼容处理
-    //   wx.getUserInfo({
-    //     success: res => {
-    //       app.globalData.userInfo = res.userInfo
-    //       this.setData({
-    //         userInfo: res.userInfo,
-    //         hasUserInfo: true
-    //       })
-    //     }
-    //   })
-    // }
+    }
+  },
+  arrayToString(array){
+    let str = '';
+    array.forEach((item)=>{
+      console.log(item)
+      str = str + item + ','
+    })
+    return str.substring(0, str.length-1)
+  },
+  //获取秒杀和拼团活动ID
+  getActivityId(type){
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/backstage/activity-ids',
+      data: {
+        type: type,
+        status:1
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        if(type == 1) {
+          that.setData({
+            zutuanId: that.arrayToString(res.data.result)
+          })
+        } else{
+          that.setData({
+            miaoshaId: that.arrayToString(res.data.result)
+          })
+        }
+      }
+    })
   },
   //获取openId，sessionKey
   getOpenId: function(){
