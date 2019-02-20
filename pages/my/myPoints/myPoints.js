@@ -28,7 +28,7 @@ Page({
       })
 
       this.getPoints();
-      this.getCoupon();
+      //this.getCoupon();
     }
   },
 

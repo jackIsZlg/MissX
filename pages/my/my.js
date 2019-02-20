@@ -19,7 +19,7 @@ Page({
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_order4.png`, name: '已完成', url: '', type: 'sign'  },
     ],
     myLink1:[
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon1.png`, name: '收货地址', url:'/pages/address/myAddress/myAddress'},
+      // { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon1.png`, name: '收货地址', url:'/pages/address/myAddress/myAddress'},
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '/pages/cart/cart' }
     ],
     myLink2: [
