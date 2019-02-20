@@ -73,14 +73,17 @@ Page({
         url: '/packages/trade/zan-account/index'
       })
     } else {
-      wx.navigateToMiniProgram({
-        appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
-        path: 'pages/goods/detail/index?alias=2ogl3i386cpxp', // 跳转的目标页面
-        extarData: this.data.extraData,
-        success(res) {
-          // 打开成功  
-        }
-      }) 
+      wx.navigateTo({
+        url: '/pages/community/communityJump/communityJump'
+      })
+      // wx.navigateToMiniProgram({
+      //   appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
+      //   path: 'pages/goods/detail/index?alias=2ogl3i386cpxp', // 跳转的目标页面
+      //   extarData: this.data.extraData,
+      //   success(res) {
+      //     // 打开成功  
+      //   }
+      // }) 
     }
 
   }

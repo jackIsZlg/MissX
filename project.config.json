@@ -74,8 +74,8 @@
 				},
 				{
 					"id": 5,
-					"name": "communityPay",
-					"pathName": "pages/community/communityPay/communityPay",
+					"name": "communityJump",
+					"pathName": "pages/community/communityJump/communityJump",
 					"query": "",
 					"scene": null
 				},

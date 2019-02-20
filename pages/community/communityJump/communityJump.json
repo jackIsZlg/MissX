@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "进入社群",
+  "usingComponents": {
+     "goods": "plugin://yzGoodsPlugin/goods"
+  }
+}
