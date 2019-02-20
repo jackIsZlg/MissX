@@ -38,7 +38,6 @@ Page({
   arrayToString(array){
     let str = '';
     array.forEach((item)=>{
-      console.log(item)
       str = str + item + ','
     })
     return str.substring(0, str.length-1)

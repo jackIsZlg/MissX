@@ -7,6 +7,7 @@ Page({
    */
   data: {
     baseUrl: getApp().globalData.baseUrl,
+    extraData: getApp().globalData.extraData,
     bgSrc: app.globalData.baseUrl + '/img/WeChat/communityEnter.png'
   },
 
@@ -67,8 +68,20 @@ Page({
   },
   // 先绑定手机号
   buyCommunity:function(){
-    wx.navigateTo({
-      url: '/packages/trade/zan-account/index'
-    })
+    if (!wx.getStorageSync('loginInfo').flag) {
+      wx.navigateTo({
+        url: '/packages/trade/zan-account/index'
+      })
+    } else {
+      wx.navigateToMiniProgram({
+        appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
+        path: 'pages/goods/detail/index?alias=2ogl3i386cpxp', // 跳转的目标页面
+        extarData: this.data.extraData,
+        success(res) {
+          // 打开成功  
+        }
+      }) 
+    }
+
   }
 })
