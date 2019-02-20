@@ -24,7 +24,7 @@
     <text class='my_name'>{{userInfo.nickName}}</text>
     <view class='my_grade'>
       <view>积分等级</view>
-      <text>Lv 8</text>
+      <text>Lv {{pointsLevel}}</text>
     </view>
   </view>
   <view class='my_community' bindtap='goToMyCenter'>
