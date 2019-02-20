@@ -31,7 +31,8 @@ Page({
     ],
     flag: wx.getStorageSync('loginInfo').flag,
     userInfo: null,
-    hasUserInfo: false
+    hasUserInfo: false,
+    pointsLevel: 0,
   },
 
   /**
@@ -47,6 +48,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+      this.getPoints();
     }
   },
 
@@ -108,6 +110,16 @@ Page({
         })
         return;
       }
+    } else if (url.indexOf('myBalance') > 0) {
+      wx.navigateToMiniProgram({
+        appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
+        path: 'packages/salesman/salesman-center/index', // 跳转的目标页面
+        extarData: this.data.extraData,
+        success(res) {
+          // 打开成功  
+        }
+      })
+      return;
     }
     wx.navigateTo({
       url: url
@@ -136,5 +148,25 @@ Page({
         })
       }
     })
-  }
+  },
+
+  //积分接口
+  getPoints: function () {
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/web/yz-point-log',
+      data: {
+        openid: that.data.openId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        that.setData({
+          pointsLevel: res.data.result.level
+        })
+      }
+    })
+  },
 })

@@ -9,7 +9,12 @@ Page({
    */
   data: {
     userInfo: null,
-    hasUserInfo: false
+    hasUserInfo: false,
+    openId: wx.getStorageSync('loginInfo').openid,
+    pointsLevel:0,//等级
+    totalPoints:"0",//总积分
+    totalResults:"0",//总条数
+    details:[]
   },
 
   /**
@@ -21,6 +26,9 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+
+      this.getPoints();
+      this.getCoupon();
     }
   },
 
@@ -71,5 +79,29 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  //积分接口
+  getPoints: function(){
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/web/yz-point-log',
+      data: {
+        openid: that.data.openId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        console.log(res.data.result);
+        that.setData({
+          pointsLevel: res.data.result.level,
+          totalPoints: res.data.result.totalPoints,
+          totalResults: res.data.result.totalResults,
+          details: res.data.result.details
+        })
+      }
+    })
   }
 })

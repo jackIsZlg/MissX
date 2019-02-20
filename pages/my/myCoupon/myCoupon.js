@@ -7,26 +7,29 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
-    openId: '',
+    openId: wx.getStorageSync('loginInfo').openid,
+    status: 'VALID',//VALID 有效（未使用） USED 已使用 INVALID 已失效
+    cards:[],//优惠券
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://open.youzan.com/api/oauthentry/youzan.ump.promocard.buyer/3.0.1/search',
-      data: {
-        open_user_id: wx.getStorageSync('loginInfo').openid
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      method: 'get',
-      success(res) {
-        //console.log(res.data)
-      }
-    })
+    // wx.request({
+    //   url: 'https://open.youzan.com/api/oauthentry/youzan.ump.promocard.buyer/3.0.1/search',
+    //   data: {
+    //     open_user_id: wx.getStorageSync('loginInfo').openid
+    //   },
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded'
+    //   },
+    //   method: 'get',
+    //   success(res) {
+    //     //console.log(res.data)
+    //   }
+    // })
+    this.getCoupon();
   },
 
   /**
@@ -76,5 +79,73 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  //切换
+  toggleStatus: function(e){
+    console.log(e);
+    let status = e.currentTarget.dataset.status;
+    this.setData({
+      status: status
+    })
+    this.getCoupon();
+  },
+
+  //优惠券接口
+  getCoupon: function () {
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/web/yz-promo-card',
+      data: {
+        openid: that.data.openId,
+        status: that.data.status
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        //console.log(res.data.result.cards);
+        let cards = res.data.result.cards.map((val,index,arr)=>{
+          // value优惠面额（单位：分）
+          val.value = val.value / 100;
+          // 卡券有效开始时间(UTC时间格式)
+          val.valid_start_at = that.timeFormat(val.valid_start_at).split(" ")[0];
+          // 卡券有效过期时间
+          val.expire_at = that.timeFormat(val.expire_at).split(" ")[0];
+          return val;
+        })
+        console.log(cards);
+        that.setData({
+          cards: cards
+        })
+      }
+    })
+  },
+
+  timeFormat: function(time){
+      var d = new Date(time);
+      var year = d.getFullYear();       //年  
+      var month = d.getMonth() + 1;     //月  
+      var day = d.getDate();            //日  
+
+      var hh = d.getHours();            //时  
+      var mm = d.getMinutes();          //分  
+      var ss = d.getSeconds();           //秒  
+      var clock = year + ".";
+      if (month < 10)
+        clock += "0";
+      clock += month + ".";
+      if (day < 10)
+        clock += "0";
+      clock += day + " ";
+      if (hh < 10)
+        clock += "0";
+      clock += hh + ":";
+      if (mm < 10) clock += '0';
+      clock += mm + ":";
+      if (ss < 10) clock += '0';
+      clock += ss;
+      return (clock);
+  },
 })

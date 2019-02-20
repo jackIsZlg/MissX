@@ -69,3 +69,9 @@ page{
 .coupon_desc text.title{
   color: #333;
 }
+.noData{
+  font-size:26rpx;
+  color:#999;
+  margin-top: 100rpx;
+  text-align: center;
+}
