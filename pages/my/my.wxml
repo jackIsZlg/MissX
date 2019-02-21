@@ -28,7 +28,8 @@
     </view>
   </view>
   <view class='my_community' bindtap='goToMyCenter'>
-    <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_communityBtn.png'></image>
+    <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_communityJoin.png' wx:if='{{!groupFlag}}'></image>
+    <image src='https://miss.xuanyantech.com/img/WeChat/myCenter_communityBtn.png' wx:if='{{groupFlag}}'></image>
   </view>
 </view>
 </block>
