@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/shop/shop",
     "pages/my/my",
+    "pages/goodsJump/goodsJump",
     "pages/my/myBalance/myBalance",
     "pages/my/myCoupon/myCoupon",
     "pages/my/myCourse/myCourse",

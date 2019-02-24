@@ -21,6 +21,99 @@
   margin-left: 20rpx;
   color: #aeaeae;
 }
+
+.six-list{
+  width: 100%;
+  height: 348rpx;
+}
+
+.six-one {
+   display: flex;
+   padding: 0 71rpx;
+   box-sizing: border-box;
+   justify-content: space-between;
+   margin-top: 39rpx;
+}
+
+.six-view {
+  font-size: 26rpx;
+  color: #333;
+  text-align: center;
+  width: 152rpx;
+}
+
+.six-view .six-bg{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six1.png);
+  background-size: cover;
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto 8rpx;
+}
+.six-bg.six2{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six2.png);
+  background-size: cover;
+}
+.six-bg.six3{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six3.png);
+  background-size: cover;
+}
+.six-bg.six4{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six4.png);
+  background-size: cover;
+}
+.six-bg.six5{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six5.png);
+  background-size: cover;
+}
+.six-bg.six6{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-six6.png);
+  background-size: cover;
+}
+
+.three-view{
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 23rpx 20rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.three-view .three-limit{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-limit.png);
+  background-size: cover;
+  width: 342rpx;
+  height: 440rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+.three-view .three-two{
+  width: 352rpx;
+  height: 440rpx;
+  border-radius: 10rpx;
+}
+
+.three-two .three-dapai{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-dapai.png);
+  background-size: cover;
+  display: block;
+  width: 352rpx;
+  height: 215rpx;
+  border-radius: 10rpx;
+}
+
+.three-two .three-jifen{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-jifen.png);
+  background-size: cover;
+  display: block;
+  width: 352rpx;
+  height: 215rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+}
+
 .input-pla {
   color: #aeaeae;
 }
@@ -30,7 +123,6 @@
    height: 362rpx;
    background-size: cover;
    margin-top: 20rpx;
-   margin-bottom: 36rpx;
 }
 
 .slide-title{
@@ -38,62 +130,108 @@
   color: #999999;
   display: flex;
   width: 100%;
-  padding: 0 60rpx;
+  padding: 0 50rpx;
   box-sizing: border-box;
   justify-content: space-between;
   margin-bottom: 18rpx;
   border-bottom: 1rpx solid #f5f5f5;
 }
 
-.slide-title div{
-  min-width: 100rpx;
+.slide-title .silid-div{
+  width: 130rpx;
+  min-width: 130rpx;
   text-align: center;
+  display: block;
 }
 
-.slide-title div.active{
-  color: #fe989a;
+.slide-img0{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid0.png);
+   background-size: cover;
+   width: 60rpx;
+   height: 60rpx;
+   display: block;
+   margin: 41rpx auto 33rpx;
 }
 
-.slide-title div span{
+.slide-img1{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid1.png);
+   background-size: cover;
+   width: 60rpx;
+   height: 60rpx;
+   display: block;
+   margin: 41rpx auto 33rpx;
+}
+.slide-img2{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid2.png);
+   background-size: cover;
+   width: 60rpx;
+   height: 60rpx;
+   display: block;
+   margin: 41rpx auto 33rpx;
+}
+.slide-img3{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid3.png);
+   background-size: cover;
+   width: 60rpx;
+   height: 60rpx;
+   display: block;
+   margin: 41rpx auto 33rpx;
+}
+.slide-img0.active{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid0A.png);
+   background-size: cover;
+}
+.slide-img1.active{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid1A.png);
+   background-size: cover;
+}
+.slide-img2.active{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid2A.png);
+   background-size: cover;
+}
+.slide-img3.active{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-solid3A.png);
+   background-size: cover;
+}
+
+.slide-title .silid-div.active{
+  color: #ff786d;
+}
+
+.slide-title .silid-div span{
    width: 100rpx;
    height: 4rpx;
    display: block;
    margin: 18rpx auto 0;
 }
-.slide-title div.active span{
+.slide-title .silid-div.active span{
    background-color: #ffc4bf;
 }
 
 .seckill-tip{
-  margin-top: 62rpx;
-  height: 50rpx;
-  line-height: 50rpx;
-  font-size: 28rpx;
-  background-color: #fffafb;
+  height: 27rpx;
+  background-color: #f7f7f7;
   width: 100%;
-  text-align: center;
-  color: #ffc4c0;
+  margin-top: 25rpx;
 }
 
 .img-title{
   width: 255rpx;
   height: 100rpx;
-  margin: 90rpx auto 60rpx;
+  margin: 90rpx auto 0;
   display:block;
 }
 
 .youhuo{
    width: 750rpx;
    height: 404rpx;
-   margin-bottom: 66rpx;
+   margin: 60rpx auto 66rpx;
 }
 
 .youhuo.banner0{
      background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo0.png);
      background-size: cover;
-
 }
-
 
 .youhuo.banner1{
      background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo1.png);
@@ -110,7 +248,7 @@
   background-size: cover;
   width: 710rpx;
   height: 410rpx;
-  margin: 10rpx auto 50rpx;
+  margin: 50rpx auto 50rpx;
 }
 
 

@@ -20,7 +20,8 @@
     open-id="{{ openId }}"
     goods-group-id="{{ goodsGroupId }}"
     layout="{{ 1 }}"
-    size-type="{{ 0 }}"
+    size-type="{{ 7 }}"
+    borderRadiusType="{{ 2 }}"
     open-cart
     redirect-type="3"
     bind:item-click="handleGoodsClick"

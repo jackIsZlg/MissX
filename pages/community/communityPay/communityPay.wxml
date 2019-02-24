@@ -2,6 +2,6 @@
   <view class='title'>{{groupInfo.groupName}}</view>
   <view>
      <!-- <view class='image-bg'></view> -->
-     <image src='' class='image-bg'></image>
+     <image src='{{bannerList[4].url}}' class='image-bg'></image>
   </view>
 </view>

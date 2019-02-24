@@ -5,12 +5,47 @@ const app = getApp()
 Page({
   data: {
     type:0,
+    bannerList: [], //banner链接地址
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
     extraData: getApp().globalData.extraData,
     openId: '',
     goodsGroupId: 105866329,
-    goodsList: [105866329, 105290599, 105866361, 105866362],
+    goodsList: [105866329, 105290599, 105866361, 105866362],//依次是：会员任务，热卖，新品上架，明星同款
+    jumpGoods: [
+      {
+        name: '寻美观推荐',
+        groupId: 106075940
+      },
+      {
+        name: '美妆个护',
+        groupId: 106075949
+      },
+      {
+        name: '时尚潮品',
+        groupId: 106075950
+      },
+      {
+        name: '3C数码',
+        groupId: 106075955
+      },
+      {
+        name: '趣味食品',
+        groupId: 106075956
+      },
+      {
+        name: '母婴居家',
+        groupId: 106075957
+      },
+      {
+        name: '大牌试用',
+        groupId: 106075958
+      },
+      {
+        name: '积分兑换',
+        groupId: 106075959
+      },
+    ], //依次是寻美观推荐，美妆个护，时尚潮品，3C数码，趣味食品，母婴居家
     zutuanId: '', // 组团Id
     miaoshaId: '',  // 秒杀Id
     motto: 'Hello World',
@@ -27,6 +62,7 @@ Page({
   onLoad: function () {
     this.getActivityId(1); //组团
     this.getActivityId(2); //秒杀
+    this.getImgbg();
     if (!wx.getStorageSync('loginInfo')) {
       this.getOpenId();
     } else {
@@ -34,6 +70,48 @@ Page({
         openId: wx.getStorageSync('loginInfo').openid
       })
     }
+  },
+  // 获取图片背景
+  getImgbg(){
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/banner/list',
+      data: {},
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        that.setData({
+          bannerList: res.data.result
+        })
+      }
+    })
+  },
+  // 四处跳转
+  goToGoods(e){
+    let type = e.currentTarget.dataset.type;
+    let groupId = this.data.jumpGoods[type].groupId;
+    let name = this.data.jumpGoods[type].name;
+    wx.navigateTo({
+      url: `/pages/goodsJump/goodsJump?groupId=${groupId}&type=goods&name=${name}`
+    })
+  },
+  //跳专题
+  goToZhuanTi(e) {
+    let num = e.currentTarget.dataset.num;
+    let groupId = num == 1 ? 105927834 : 105927849;
+    let name = '诱惑专场';
+    wx.navigateTo({
+      url: `/pages/goodsJump/goodsJump?groupId=${groupId}&type=goods&name=${name}`
+    })
+  },
+  // 限量秒杀
+  goToMiaosha(){
+   let name = '限量秒杀';
+    wx.navigateTo({
+      url: `/pages/goodsJump/goodsJump?type=miaosha&name=${name}`
+    })
   },
   arrayToString(array){
     let str = '';
@@ -64,6 +142,7 @@ Page({
           that.setData({
             miaoshaId: that.arrayToString(res.data.result)
           })
+          wx.setStorageSync('miaoshaId', that.arrayToString(res.data.result))
         }
       }
     })
@@ -94,17 +173,11 @@ Page({
       }
     })
   },
+  // 菜单点击
   menuClick:function(e) {
-    let num = e.target.dataset.num;
+    let num = e.currentTarget.dataset.num;
     this.setData({
-      type: e.target.dataset.num,
-      goodsGroupId: this.data.goodsList[num]
-    })
-  },
-  menuClick:function(e) {
-    let num = e.target.dataset.num;
-    this.setData({
-      type: e.target.dataset.num,
+      type: e.currentTarget.dataset.num,
       goodsGroupId: this.data.goodsList[num]
     })
   },

@@ -1,0 +1,25 @@
+  <view wx:if='{{showMiaosha}}'>
+      <seckill
+      app-id="{{ appId }}"
+      shop-id="{{ shopId }}"
+      open-id="{{ openId }}"
+      layout="{{ 0 }}"
+      seckill-ids="{{ miaoshaId }}"
+    />
+  </view>
+
+<view wx:if='{{!showMiaosha}}'>
+  <goods
+    app-id="{{ appId }}"
+    shop-id="{{ shopId }}"
+    open-id="{{ openId }}"
+    goods-group-id="{{ groupId }}"
+    layout="{{ 3 }}"
+    size-type="{{ 7 }}"
+    buyButtonType="{{ 1 }}"
+    open-cart
+    redirect-type="3"
+    bind:item-click="handleGoodsClick"
+    bind:buy="handleGoodsClick"
+  />
+</view>

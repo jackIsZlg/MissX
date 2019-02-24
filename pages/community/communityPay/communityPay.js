@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    bannerList: [], //banner链接地址
     groupInfo: [],
     openid: ''
   },
@@ -14,6 +15,24 @@ Page({
    */
   onLoad: function (options) {
     this.getInfo();
+    this.getImgbg();
+  },
+  // 获取图片背景
+  getImgbg() {
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/banner/list',
+      data: {},
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        that.setData({
+          bannerList: res.data.result
+        })
+      }
+    })
   },
   getInfo(){
     let that = this;
