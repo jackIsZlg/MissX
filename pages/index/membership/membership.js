@@ -80,6 +80,22 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //跳转社群
+  goToMyCenter: function () {
+    let url = '';
+    if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
+      if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
+        url = '/pages/community/communityPay/communityPay';
+      } else { // 没有绑定过
+        url = '/pages/community/communitySelect/communitySelect';
+      }
+    } else {
+      url = '/pages/community/communityEnter/communityEnter';
+    }
+    wx.navigateTo({
+      url: url
+    })
+  },
   imageLoad: function (e) {
     var width = e.detail.width,    //获取图片真实宽度
       height = e.detail.height,
