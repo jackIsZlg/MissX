@@ -1,0 +1,28 @@
+/* pages/index/membership/membership.wxss */
+.membership{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.membership >image{
+  margin-top:80rpx;
+}
+.membership >image:first-child{
+  margin-top:0;
+}
+.membership >image:nth-child(2),
+.membership >image:nth-child(3){
+  margin-top:50rpx;
+}
+.membership >image:nth-child(11),
+.membership >image:nth-child(12),
+.membership >image:nth-child(13){
+  margin-top:30rpx;
+}
+.join_btn{
+  width: 711rpx;
+  height:110rpx;
+  background: url('https://miss.xuanyantech.com/img/WeChat/membership_add.png') no-repeat;
+  background-size: 100% 100%;
+  margin:50rpx 0;
+}

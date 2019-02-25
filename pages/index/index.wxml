@@ -155,6 +155,6 @@
     bind:buy="handleGoodsClick"
   /> -->
    
-  <view class='index-card'></view> 
+  <navigator class='index-card' url='/pages/index/membership/membership'></navigator> 
 
 </view>

@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/membership/membership",
     "pages/shop/shop",
     "pages/my/my",
     "pages/goodsJump/goodsJump",

@@ -1,0 +1,6 @@
+<!--pages/index/membership/membership.wxml-->
+<view class='membership'>
+     <image wx:for='{{images}}' wx:key='{{index}}' src='{{item.url}}' data-index="{{ index }}" data-src='{{item.url}}'  bindload="imageLoad" style="width:{{item.width}}; height:{{item.height}}"></image>
+     <navigator class='join_btn' url='/pages/community/communityEnter/communityEnter'></navigator>
+</view>
+

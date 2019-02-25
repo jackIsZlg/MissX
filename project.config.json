@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -84,6 +84,20 @@
 					"id": 6,
 					"name": "pages/goodsJump/",
 					"pathName": "pages/goodsJump/goodsJump",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "goodsJump",
+					"pathName": "pages/goodsJump/goodsJump",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "membership",
+					"pathName": "pages/index/membership/membership",
 					"query": "",
 					"scene": null
 				}
