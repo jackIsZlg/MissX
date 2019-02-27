@@ -4,12 +4,12 @@
     <view class='qry-icon'></view>
     <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
   </view>
-  <view class='banner' style="background-image:{{bannerList[0].url}};"></view>
+  <view class='banner' style="background-image:{{bannerList[0].url}};" bindtap='goToMyCenter'></view>
   <view class='six-list'>
      <view class='six-one'>
        <view class='six-view' bindtap='goToGoods' data-type='0'>
          <div class='six-bg'></div>
-         <div class='six-tip'>寻美观推荐</div>
+         <div class='six-tip'>寻美官推荐</div>
        </view>
        <view class='six-view' bindtap='goToGoods' data-type='1'>
          <div class='six-bg six2'></div>
@@ -23,11 +23,11 @@
      <view class='six-one'>
        <view class='six-view' bindtap='goToGoods' data-type='3'>
          <div class='six-bg six4'></div>
-         <div class='six-tip'>3C数码</div>
+         <div class='six-tip'>变美黑科技</div>
        </view>
        <view class='six-view' bindtap='goToGoods' data-type='4'>
          <div class='six-bg six5'></div>
-         <div class='six-tip'>趣味食品</div>
+         <div class='six-tip'>越吃越美</div>
        </view>
        <view class='six-view' bindtap='goToGoods' data-type='5'>
          <div class='six-bg six6'></div>
@@ -155,6 +155,6 @@
     bind:buy="handleGoodsClick"
   /> -->
    
-  <navigator class='index-card' url='/pages/index/membership/membership'></navigator> 
+  <view class='index-card' bindtap='goToMyCenter'></view> 
 
 </view>

@@ -80,22 +80,42 @@ Page({
   onShareAppMessage: function () {
 
   },
-  //跳转社群
-  goToMyCenter: function () {
-    let url = '';
-    if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
-      if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
-        url = '/pages/community/communityPay/communityPay';
-      } else { // 没有绑定过
-        url = '/pages/community/communitySelect/communitySelect';
-      }
+  // 先绑定手机号
+  buyCommunity: function () {
+    if (!wx.getStorageSync('loginInfo').flag) {
+      wx.navigateTo({
+        url: '/packages/trade/zan-account/index'
+      })
     } else {
-      url = '/pages/community/communityEnter/communityEnter';
+      wx.navigateTo({
+        url: '/pages/community/communityJump/communityJump'
+      })
+      // wx.navigateToMiniProgram({
+      //   appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
+      //   path: 'pages/goods/detail/index?alias=2ogl3i386cpxp', // 跳转的目标页面
+      //   extarData: this.data.extraData,
+      //   success(res) {
+      //     // 打开成功  
+      //   }
+      // }) 
     }
-    wx.navigateTo({
-      url: url
-    })
   },
+  // //跳转社群
+  // goToMyCenter: function () {
+  //   let url = '';
+  //   if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
+  //     if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
+  //       url = '/pages/community/communityPay/communityPay';
+  //     } else { // 没有绑定过
+  //       url = '/pages/community/communitySelect/communitySelect';
+  //     }
+  //   } else {
+  //     url = '/pages/community/communityEnter/communityEnter';
+  //   }
+  //   wx.navigateTo({
+  //     url: url
+  //   })
+  // },
   imageLoad: function (e) {
     var width = e.detail.width,    //获取图片真实宽度
       height = e.detail.height,

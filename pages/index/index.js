@@ -14,7 +14,7 @@ Page({
     goodsList: [105866329, 105290599, 105866361, 105866362],//依次是：会员任务，热卖，新品上架，明星同款
     jumpGoods: [
       {
-        name: '寻美观推荐',
+        name: '寻美官推荐',
         groupId: 106075940
       },
       {
@@ -26,11 +26,11 @@ Page({
         groupId: 106075950
       },
       {
-        name: '3C数码',
+        name: '变美黑科技',
         groupId: 106075955
       },
       {
-        name: '趣味食品',
+        name: '越吃越美',
         groupId: 106075956
       },
       {
@@ -179,6 +179,22 @@ Page({
     this.setData({
       type: e.currentTarget.dataset.num,
       goodsGroupId: this.data.goodsList[num]
+    })
+  },
+  //跳转社群
+  goToMyCenter: function () {
+    let url = '';
+    if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
+      if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
+        url = '/pages/community/communityPay/communityPay';
+      } else { // 没有绑定过
+        url = '/pages/community/communitySelect/communitySelect';
+      }
+    } else {
+      url = '/pages/index/membership/membership';
+    }
+    wx.navigateTo({
+      url: url
     })
   },
   getUserInfo: function(e) {

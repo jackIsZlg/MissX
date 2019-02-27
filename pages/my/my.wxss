@@ -39,7 +39,7 @@ page{
   margin-top:15rpx;
 }
 .my_grade view{
-  width:120rpx;
+  width:135rpx;
   height: 36rpx;
   line-height: 36rpx;
   font-size: 24rpx;

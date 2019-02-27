@@ -23,9 +23,9 @@ Page({
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '/pages/cart/cart' }
     ],
     myLink2: [
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '邀请奖励', url: '/pages/community/communityIntro/communityIntro' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '任务中心', url: '/pages/community/communityIntro/communityIntro' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon4.png`, name: '我的积分', url: '/pages/my/myPoints/myPoints' },
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '返现', url: '/pages/my/myBalance/myBalance' },
+      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '我的收益', url: '/pages/my/myBalance/myBalance' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon6.png`, name: '优惠券', url: '/pages/my/myCoupon/myCoupon' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon7.png`, name: '课程', url: '/pages/my/myCourse/myCourse' },
     ],
@@ -128,7 +128,8 @@ Page({
       url: url
     })
   },
-  goToMyCenter:function(){
+  //跳转社群
+  goToMyCenter: function () {
     let url = '';
     if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
       if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
@@ -137,7 +138,7 @@ Page({
         url = '/pages/community/communitySelect/communitySelect';
       }
     } else {
-      url = '/pages/community/communityEnter/communityEnter';
+      url = '/pages/index/membership/membership';
     }
     wx.navigateTo({
       url: url

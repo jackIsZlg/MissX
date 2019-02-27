@@ -8,7 +8,7 @@
     <button class='my_name' hover-class="btn-hover"
       open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击显示微信头像</button>
     <view class='my_grade'>
-      <view>积分等级</view>
+      <view>寻美官等级</view>
       <text>* * * *</text>
     </view>
   </view>
@@ -23,7 +23,7 @@
   <view class='my_basic'>
     <text class='my_name'>{{userInfo.nickName}}</text>
     <view class='my_grade'>
-      <view>积分等级</view>
+      <view>寻美官等级</view>
       <text>Lv {{pointsLevel}}</text>
     </view>
   </view>

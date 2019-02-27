@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -61,8 +61,8 @@
 				},
 				{
 					"id": 3,
-					"name": "communityPay",
-					"pathName": "pages/community/communityPay/communityPay",
+					"name": "communityEnter",
+					"pathName": "pages/community/communityEnter/communityEnter",
 					"query": "",
 					"scene": null
 				},
@@ -98,6 +98,13 @@
 					"id": -1,
 					"name": "membership",
 					"pathName": "pages/index/membership/membership",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "communitySelect",
+					"pathName": "pages/community/communitySelect/communitySelect",
 					"query": "",
 					"scene": null
 				}

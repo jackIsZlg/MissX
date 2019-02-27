@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['美妆社区', '护肤社区', '洗护社区', '首饰社区'],
-    index: 1,
+    array: ['Miss社区'],
+    index: 0,
     openid: '', 
     name: '',
     mobile: '',
