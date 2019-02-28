@@ -51,6 +51,12 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    showFix: false,
+    imgUrls:[
+      'https://miss.xuanyantech.com/img/WeChat/index-banner1.png',
+      'https://miss.xuanyantech.com/img/WeChat/index-banner2.png',
+      'https://miss.xuanyantech.com/img/WeChat/index-banner3.png',
+    ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -197,8 +203,29 @@ Page({
       url: url
     })
   },
+  //打开客服等信息
+  openFix:function(e){
+    let type = e.currentTarget.dataset.type;
+    if (type == 'show' || type == 'close') {
+      this.setData({
+        showFix: type == 'show' ? true : false
+      })
+    } else if (type == 'shop') {
+      wx.navigateTo({
+        url: '/pages/cart/cart'
+      })
+    } else if (type == 'service'){
+
+    } else {
+      wx.pageScrollTo({
+        scrollTop: 0
+      });
+      this.setData({
+        showFix: false
+      })
+    }
+  },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

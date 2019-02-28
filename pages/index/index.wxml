@@ -4,7 +4,19 @@
     <view class='qry-icon'></view>
     <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
   </view>
-  <view class='banner' style="background-image:{{bannerList[0].url}};" bindtap='goToMyCenter'></view>
+  <swiper
+    indicator-dots="{{ true }}"
+    autoplay="{{ true }}"
+    interval="{{ 5000 }}"
+    duration="{{ 500 }}"
+    circular="{{ true }}"
+  >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item bindtap='goToMyCenter'>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
   <view class='six-list'>
      <view class='six-one'>
        <view class='six-view' bindtap='goToGoods' data-type='0'>
@@ -156,5 +168,14 @@
   /> -->
    
   <view class='index-card' bindtap='goToMyCenter'></view> 
+
+  <view wx:if='{{!showFix}}' class='index-show' bindtap='openFix' data-type='show'></view>
+
+  <view wx:if='{{showFix}}'>
+     <view class='index-shop' bindtap='openFix' data-type='shop'></view>
+     <!-- <view class='index-service' bindtap='openFix' data-type='service'></view> -->
+     <view class='index-top' bindtap='openFix' data-type='top'></view>
+     <view class='index-close' bindtap='openFix' data-type='close'></view>
+  </view>
 
 </view>

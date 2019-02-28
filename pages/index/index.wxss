@@ -125,6 +125,17 @@
    margin-top: 20rpx;
 }
 
+swiper{
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 362rpx;
+}
+
+swiper image {
+  width: 750rpx;
+  height: 362rpx;
+}
+
 .slide-title{
   font-size: 32rpx;
   color: #999999;
@@ -249,6 +260,66 @@
   width: 710rpx;
   height: 410rpx;
   margin: 50rpx auto 50rpx;
+}
+
+.index-show{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-fix-show.png);
+  background-size: cover;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+  box-shadow: 0rpx 0rpx 2rpx #333;
+}
+
+.index-close{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-fix-close.png);
+  background-size: cover;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 0rpx 2rpx #333;
+}
+
+.index-shop{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-fix-shop.png);
+  background-size: cover;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 340rpx;
+  right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 0rpx 2rpx #333;
+}
+
+.index-service{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-fix-service.png);
+  background-size: cover;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 340rpx;
+  right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 0rpx 2rpx #333;
+}
+
+.index-top{
+  background-image: url(https://miss.xuanyantech.com/img/WeChat/index-fix-top.png);
+  background-size: cover;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 220rpx;
+  right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 0rpx 2rpx #333;
 }
 
 
