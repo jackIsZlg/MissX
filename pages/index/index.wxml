@@ -13,7 +13,7 @@
   >
     <block wx:for="{{imgUrls}}">
       <swiper-item bindtap='goToMyCenter'>
-        <image src="{{item}}" class="slide-image" />
+        <image src="{{item.url}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
@@ -112,60 +112,83 @@
   <view class='seckill-tip'></view>
   <image class='img-title'
    src='https://miss.xuanyantech.com/img/WeChat/index-title3.png'></image>
-   
-  <view class='youhuo banner0' bindtap='goToZhuanTi' data-num="1" style="background-image:{{bannerList[1].url}};"></view> 
 
-  <goods
-    app-id="{{ appId }}"
-    shop-id="{{ shopId }}"
-    open-id="{{ openId }}"
-    goods-group-id="{{ 105927834 }}"
-    layout="{{ 5 }}"
-    size-type="{{ 7 }}"
-    showBuyButton="{{ false }}"
-    borderRadiusType="{{ 2 }}"
-    textAlignType="{{ 'center' }}"
-    open-cart
-    redirect-type="3"
-    bind:item-click="handleGoodsClick"
-    bind:buy="handleGoodsClick"
-  />
-
-  <view class='youhuo banner1' bindtap='goToZhuanTi' data-num="2" style="background-image:{{bannerList[2].url}};"></view> 
-
+ <!-- ********专场1********** -->
+   <view wx:if="{{bannerList[3].status ==1}}">
+      <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[3].url}}'></image> 
+      <goods
+        app-id="{{ appId }}"
+        shop-id="{{ shopId }}"
+        open-id="{{ openId }}"
+        goods-group-id="{{ 105927834 }}"
+        layout="{{ 5 }}"
+        size-type="{{ 7 }}"
+        showBuyButton="{{ false }}"
+        borderRadiusType="{{ 2 }}"
+        textAlignType="{{ 'center' }}"
+        open-cart
+        redirect-type="3"
+        bind:item-click="handleGoodsClick"
+        bind:buy="handleGoodsClick"
+      />
+   </view>
+ <!-- ********专场2********** -->
+   <view wx:if="{{bannerList[4].status ==1}}">
+       <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[4].url}}'></image> 
+        <goods
+        app-id="{{ appId }}"
+        shop-id="{{ shopId }}"
+        open-id="{{ openId }}"
+        goods-group-id="{{ 105927849 }}"
+        layout="{{ 5 }}"
+        size-type="{{ 7 }}"
+        showBuyButton="{{ false }}"
+        borderRadiusType="{{ 2 }}"
+        textAlignType="{{ 'center' }}"
+        open-cart
+        redirect-type="3"
+        bind:item-click="handleGoodsClick"
+        bind:buy="handleGoodsClick"
+      />
+   </view>
+ <!-- ********专场3********** -->
+  <view wx:if="{{bannerList[5].status ==1}}">
+    <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[5].url}}'></image> 
     <goods
-    app-id="{{ appId }}"
-    shop-id="{{ shopId }}"
-    open-id="{{ openId }}"
-    goods-group-id="{{ 105927849 }}"
-    layout="{{ 5 }}"
-    size-type="{{ 7 }}"
-    showBuyButton="{{ false }}"
-    borderRadiusType="{{ 2 }}"
-    textAlignType="{{ 'center' }}"
-    open-cart
-    redirect-type="3"
-    bind:item-click="handleGoodsClick"
-    bind:buy="handleGoodsClick"
-  />
-
-  <!-- <view class='youhuo banner2'></view> 
-
-  <goods
-    app-id="{{ appId }}"
-    shop-id="{{ shopId }}"
-    open-id="{{ openId }}"
-    goods-group-id="{{ 105927870 }}"
-    layout="{{ 5 }}"
-    size-type="{{ 7 }}"
-    showBuyButton="{{ false }}"
-    borderRadiusType="{{ 2 }}"
-    textAlignType="{{ 'center' }}"
-    open-cart
-    redirect-type="3"
-    bind:item-click="handleGoodsClick"
-    bind:buy="handleGoodsClick"
-  /> -->
+      app-id="{{ appId }}"
+      shop-id="{{ shopId }}"
+      open-id="{{ openId }}"
+      goods-group-id="{{ 105927870 }}"
+      layout="{{ 5 }}"
+      size-type="{{ 7 }}"
+      showBuyButton="{{ false }}"
+      borderRadiusType="{{ 2 }}"
+      textAlignType="{{ 'center' }}"
+      open-cart
+      redirect-type="3"
+      bind:item-click="handleGoodsClick"
+      bind:buy="handleGoodsClick"
+    />
+  </view>
+ <!-- ********专场4********** -->
+<view wx:if="{{bannerList[6].status ==1}}">
+    <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[6].url}}'></image> 
+    <goods
+      app-id="{{ appId }}"
+      shop-id="{{ shopId }}"
+      open-id="{{ openId }}"
+      goods-group-id="{{ 106160638 }}"
+      layout="{{ 5 }}"
+      size-type="{{ 7 }}"
+      showBuyButton="{{ false }}"
+      borderRadiusType="{{ 2 }}"
+      textAlignType="{{ 'center' }}"
+      open-cart
+      redirect-type="3"
+      bind:item-click="handleGoodsClick"
+      bind:buy="handleGoodsClick"
+    />
+</view>
    
   <view class='index-card' bindtap='goToMyCenter'></view> 
 

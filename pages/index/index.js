@@ -88,7 +88,10 @@ Page({
       },
       method: 'get',
       success(res) {
+        let result = res.data.result;
+        let imglist = result.filter(item => item.type === 1);
         that.setData({
+          imgUrls: imglist,
           bannerList: res.data.result
         })
       }
@@ -106,10 +109,9 @@ Page({
   //跳专题
   goToZhuanTi(e) {
     let num = e.currentTarget.dataset.num;
-    let groupId = num == 1 ? 105927834 : 105927849;
     let name = '诱惑专场';
     wx.navigateTo({
-      url: `/pages/goodsJump/goodsJump?groupId=${groupId}&type=goods&name=${name}`
+      url: `/pages/goodsJump/goodsJump?groupId=${num}&type=goods&name=${name}`
     })
   },
   // 限量秒杀

@@ -234,8 +234,10 @@ swiper image {
 }
 
 .youhuo{
+   background-image: url(https://miss.xuanyantech.com/img/WeChat/index-youhuo0.png);
+   background-size: cover;
    width: 750rpx;
-   height: 404rpx;
+   height: 364rpx;
    margin: 60rpx auto 66rpx;
 }
 

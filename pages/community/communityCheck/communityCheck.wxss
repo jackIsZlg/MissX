@@ -1,0 +1,7 @@
+.check{
+  padding-top: 48rpx;
+}
+.check-cn {
+  padding: 0 22rpx;
+  box-sizing: border-box;
+}

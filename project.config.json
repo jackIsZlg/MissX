@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -82,8 +82,8 @@
 				},
 				{
 					"id": 6,
-					"name": "pages/goodsJump/",
-					"pathName": "pages/goodsJump/goodsJump",
+					"name": "communityCheck",
+					"pathName": "pages/community/communityCheck/communityCheck",
 					"query": "",
 					"scene": null
 				},

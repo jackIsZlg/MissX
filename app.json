@@ -15,6 +15,7 @@
     "pages/community/communitySelect/communitySelect",
     "pages/community/communityJump/communityJump",
     "pages/community/communityPay/communityPay",
+    "pages/community/communityCheck/communityCheck",
     "pages/address/editAddress/editAddress",
     "pages/address/myAddress/myAddress"
   ],
