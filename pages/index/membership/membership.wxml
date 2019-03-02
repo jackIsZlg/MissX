@@ -1,6 +1,7 @@
 <!--pages/index/membership/membership.wxml-->
 <view class='membership'>
      <image wx:for='{{images}}' wx:key='{{index}}' src='{{item.url}}' data-index="{{ index }}" data-src='{{item.url}}'  bindload="imageLoad" style="width:{{item.width}}; height:{{item.height}}"></image>
+     <view class='bottom-height'></view>
      <view class='join_btn' bindtap='buyCommunity'></view>
 </view>
 

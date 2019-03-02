@@ -82,8 +82,8 @@
 				},
 				{
 					"id": 6,
-					"name": "communityCheck",
-					"pathName": "pages/community/communityCheck/communityCheck",
+					"name": "communityJump",
+					"pathName": "pages/community/communityJump/communityJump",
 					"query": "",
 					"scene": null
 				},

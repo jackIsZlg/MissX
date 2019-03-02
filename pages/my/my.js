@@ -23,7 +23,7 @@ Page({
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon2.png`, name: '购物车', url: '/pages/cart/cart' }
     ],
     myLink2: [
-      { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '任务中心', url: '/pages/community/communityIntro/communityIntro' },
+      // { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon3.png`, name: '任务中心', url: '/pages/community/communityIntro/communityIntro' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon4.png`, name: '我的积分', url: '/pages/my/myPoints/myPoints' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon5.png`, name: '我的收益', url: '/pages/my/myBalance/myBalance' },
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon6.png`, name: '优惠券', url: '/pages/my/myCoupon/myCoupon' },
@@ -66,7 +66,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      flag: wx.getStorageSync('loginInfo').flag,
+      salesmanFlag: wx.getStorageSync('loginInfo').salesmanFlag,
+      groupFlag: wx.getStorageSync('loginInfo').groupFlag
+    })
   },
 
   /**

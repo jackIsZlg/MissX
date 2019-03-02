@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['Miss社区'],
+    array: ['豹变少女轻创社区'],
     index: 0,
     openid: '', 
     name: '',
@@ -112,6 +112,9 @@ Page({
       },
       method: 'get',
       success(res) {
+        let loginInfo = wx.getStorageSync('loginInfo');
+        loginInfo.groupFlag = true;
+        wx.setStorageSync('loginInfo', loginInfo)
         wx.redirectTo({
           url: '/pages/community/communityPay/communityPay'
         })

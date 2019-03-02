@@ -12,7 +12,7 @@
 }
 .banner{
    background-image: url(https://miss.xuanyantech.com/img/WeChat/shop_banner.png);
-   height: 502rpx;
+   height: 308rpx;
    margin:0;
 }
 .shop_nav{

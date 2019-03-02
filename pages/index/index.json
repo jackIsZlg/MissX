@@ -1,8 +1,9 @@
 {
-  "navigationBarTitleText": "Miss X",
+  "navigationBarTitleText": "Miss X流派",
   "usingComponents": {
     "seckill": "plugin://yzGoodsPlugin/seckill",
     "goods": "plugin://yzGoodsPlugin/goods",
+    "timelimit-discount": "plugin://yzGoodsPlugin/timelimit-discount",
     "groupon": "plugin://yzGrouponPlugin/groupon"
   }
 }

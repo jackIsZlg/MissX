@@ -48,6 +48,7 @@ Page({
     ], //依次是寻美观推荐，美妆个护，时尚潮品，3C数码，趣味食品，母婴居家
     zutuanId: '', // 组团Id
     miaoshaId: '',  // 秒杀Id
+    xianshiArray: '', // 限时折扣
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -65,9 +66,16 @@ Page({
       url: '../address/myAddress/myAddress'
     })
   },
-  onLoad: function () {
-    this.getActivityId(1); //组团
+  /**
+ * 生命周期函数--监听页面显示
+ */
+  onShow: function () {
     this.getActivityId(2); //秒杀
+  },
+  onLoad: function () {
+    this.getXianshiA(); //限时折扣
+    this.getActivityId(2); //秒杀
+    wx.removeStorageSync('loginInfo')
     this.getImgbg();
     if (!wx.getStorageSync('loginInfo')) {
       this.getOpenId();
@@ -109,7 +117,7 @@ Page({
   //跳专题
   goToZhuanTi(e) {
     let num = e.currentTarget.dataset.num;
-    let name = '诱惑专场';
+    let name = e.currentTarget.dataset.name;
     wx.navigateTo({
       url: `/pages/goodsJump/goodsJump?groupId=${num}&type=goods&name=${name}`
     })
@@ -127,6 +135,52 @@ Page({
       str = str + item + ','
     })
     return str.substring(0, str.length-1)
+  },
+  //获取限时折扣
+  getXianshiA() {
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/backstage/activity-list',
+      data: {
+        type: 3,
+        status: 1
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        that.setData({
+          xianshiArray: res.data.result
+        })
+      }
+    })
+  },
+  //获取openId，sessionKey
+  getOpenId: function () {
+    wx.login({
+      success: res => {
+        let that = this;
+        wx.request({
+          url: 'https://miss.xuanyantech.com/api-admin/wechat-login',
+          data: {
+            js_code: res.code
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          method: 'get',
+          success(res) {
+            wx.setStorageSync('loginInfo', res.data.result)
+            that.setData({
+              openId: res.data.result.openid
+            })
+            //console.log(res.data)
+          }
+        })
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      }
+    })
   },
   //获取秒杀和拼团活动ID
   getActivityId(type){
@@ -146,7 +200,7 @@ Page({
           that.setData({
             zutuanId: that.arrayToString(res.data.result)
           })
-        } else{
+        } else if (type == 2){
           that.setData({
             miaoshaId: that.arrayToString(res.data.result)
           })
@@ -188,6 +242,18 @@ Page({
       type: e.currentTarget.dataset.num,
       goodsGroupId: this.data.goodsList[num]
     })
+  },
+  //banner跳转
+  bannerJump:function(e){
+    let item = e.currentTarget.dataset.item;
+    const { linkId, detail } = item;
+    if (!detail || !linkId) {
+      this.goToMyCenter();
+    } else {
+      wx.navigateTo({
+        url: `/pages/goodsJump/goodsJump?groupId=${linkId}&type=goods&name=${detail}`
+      })
+    }
   },
   //跳转社群
   goToMyCenter: function () {

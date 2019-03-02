@@ -11,8 +11,8 @@
     duration="{{ 500 }}"
     circular="{{ true }}"
   >
-    <block wx:for="{{imgUrls}}">
-      <swiper-item bindtap='goToMyCenter'>
+    <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+      <swiper-item bindtap='bannerJump' data-item='{{item}}'>
         <image src="{{item.url}}" class="slide-image" />
       </swiper-item>
     </block>
@@ -100,14 +100,30 @@
   <view class='seckill-tip'></view>
   <image class='img-title' 
   src='https://miss.xuanyantech.com/img/WeChat/index-title2.png'></image>
-  <groupon
+  <!-- <groupon
       app-id="{{ appId }}"
       shop-id="{{ shopId }}"
       open-id="{{ openId }}"
       size="2"
       goods-source="0"
       activity-ids="{{ zutuanId }}"
-  />
+  /> -->
+
+   <view wx:for="{{xianshiArray}}" wx:key='{{index}}'>
+      <timelimit-discount
+        app-id="{{ appId }}"
+        shop-id="{{ shopId }}"
+        open-id="{{ openId }}"
+        layout="{{ 3 }}"
+        extra-data="{{ extraData }}"
+        activity-id="{{ item.activityId }}"
+        item-ids="{{ item.itemIds }}"
+        open-cart
+        redirect-type="3"
+        bind:item-click="handleGoodsClick"
+        bind:buy="handleGoodsClick"
+      />
+   </view>
 
   <view class='seckill-tip'></view>
   <image class='img-title'
@@ -115,12 +131,12 @@
 
  <!-- ********专场1********** -->
    <view wx:if="{{bannerList[3].status ==1}}">
-      <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[3].url}}'></image> 
+      <image class='youhuo' bindtap='goToZhuanTi' data-num="{{bannerList[3].linkId}}" data-name="{{bannerList[3].detail}}" src='{{bannerList[3].url}}' ></image> 
       <goods
         app-id="{{ appId }}"
         shop-id="{{ shopId }}"
         open-id="{{ openId }}"
-        goods-group-id="{{ 105927834 }}"
+        goods-group-id="{{ bannerList[3].linkId }}"
         layout="{{ 5 }}"
         size-type="{{ 7 }}"
         showBuyButton="{{ false }}"
@@ -134,12 +150,12 @@
    </view>
  <!-- ********专场2********** -->
    <view wx:if="{{bannerList[4].status ==1}}">
-       <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[4].url}}'></image> 
+       <image class='youhuo' bindtap='goToZhuanTi' src='{{bannerList[4].url}}' data-num="{{bannerList[4].linkId}}" data-name="{{bannerList[4].detail}}"></image> 
         <goods
         app-id="{{ appId }}"
         shop-id="{{ shopId }}"
         open-id="{{ openId }}"
-        goods-group-id="{{ 105927849 }}"
+        goods-group-id="{{ bannerList[4].linkId }}"
         layout="{{ 5 }}"
         size-type="{{ 7 }}"
         showBuyButton="{{ false }}"
@@ -153,12 +169,12 @@
    </view>
  <!-- ********专场3********** -->
   <view wx:if="{{bannerList[5].status ==1}}">
-    <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[5].url}}'></image> 
+    <image class='youhuo' bindtap='goToZhuanTi' src='{{bannerList[5].url}}' data-num="{{bannerList[5].linkId}}" data-name="{{bannerList[5].detail}}"></image> 
     <goods
       app-id="{{ appId }}"
       shop-id="{{ shopId }}"
       open-id="{{ openId }}"
-      goods-group-id="{{ 105927870 }}"
+      goods-group-id="{{ bannerList[5].linkId }}"
       layout="{{ 5 }}"
       size-type="{{ 7 }}"
       showBuyButton="{{ false }}"
@@ -172,12 +188,12 @@
   </view>
  <!-- ********专场4********** -->
 <view wx:if="{{bannerList[6].status ==1}}">
-    <image class='youhuo' bindtap='goToZhuanTi' data-num="105927834" src='{{bannerList[6].url}}'></image> 
+    <image class='youhuo' bindtap='goToZhuanTi' src='{{bannerList[6].url}}' data-num="{{bannerList[6].linkId}}" data-name="{{bannerList[6].detail}}"></image> 
     <goods
       app-id="{{ appId }}"
       shop-id="{{ shopId }}"
       open-id="{{ openId }}"
-      goods-group-id="{{ 106160638 }}"
+      goods-group-id="{{ bannerList[6].linkId }}"
       layout="{{ 5 }}"
       size-type="{{ 7 }}"
       showBuyButton="{{ false }}"

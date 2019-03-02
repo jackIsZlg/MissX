@@ -11,7 +11,7 @@ Page({
   },
 
   onLoad: function(options) {
-    const { from } = options;
+    let { from = '' } = options;
     console.log(from)
     this.setData({
       from: from,
@@ -38,15 +38,15 @@ Page({
       },
       method: 'get',
       success(res) {
+        let loginInfo = wx.getStorageSync('loginInfo')
+        loginInfo.flag = true;
+        wx.setStorageSync('loginInfo', loginInfo);
         if(that.data.from == 'my') {
-          let loginInfo = wx.getStorageSync('loginInfo')
-          loginInfo.flag = true;
-          wx.setStorageSync('loginInfo', loginInfo);
           wx.switchTab({
             url: '/pages/my/my'
           })
         } else {
-          wx.navigateTo({
+          wx.redirectTo({
             url: '/pages/community/communityJump/communityJump'
           })
           // wx.navigateToMiniProgram({

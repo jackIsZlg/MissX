@@ -12,7 +12,7 @@ Page({
     shopId: 98539213,
     openId: wx.getStorageSync('loginInfo').openid,
     type: 0,
-    goodsList: [105929740,105927889,105927900,105927907,105927914],
+    goodsList: [105929740,105927914,106075957,106179292,106179298],
     goodsGroupId: 105929740,
   },
 

@@ -19,6 +19,7 @@ Page({
    */
   onLoad: function (options) {
     if (options.type == 'goods') {
+      console.log(options.groupId)
       this.setData({
         groupId: options.groupId,
         showMiaosha:false,
@@ -27,6 +28,7 @@ Page({
     }else{// 秒杀
       this.setData({
         showMiaosha: true,
+        miaoshaId: wx.getStorageSync('miaoshaId'),  // 秒杀Id
         openId: wx.getStorageSync('loginInfo').openid
       })
     }

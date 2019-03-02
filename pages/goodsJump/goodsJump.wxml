@@ -19,6 +19,7 @@
     buyButtonType="{{ 1 }}"
     open-cart
     redirect-type="3"
+    goodsNum="{{ 100 }}"
     bind:item-click="handleGoodsClick"
     bind:buy="handleGoodsClick"
   />
