@@ -8,7 +8,6 @@
     size-type="{{ 7 }}"
     extraData="{{extraData}}"
     redirect-type="0"
-    textAlignType="{{ 'center' }}"
-    showBuyButton="{{ false }}"
+    buyButtonType="{{ 4 }}"
     borderRadiusType="{{ 2 }}"
   />

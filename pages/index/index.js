@@ -66,6 +66,18 @@ Page({
       url: '../address/myAddress/myAddress'
     })
   },
+  //分享
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: 'MissX流派 一亿轻中产女性的变美场',
+      path: '/pages/index/index',
+      imageUrl: 'https://miss.xuanyantech.com/img/WeChat/index-share.png'
+    }
+  },
   /**
  * 生命周期函数--监听页面显示
  */
