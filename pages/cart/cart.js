@@ -71,7 +71,7 @@ Page({
   goBuy({ detail: { bookKey } }) {
     const { openId, appId, shopId } = this.data;
     wx.navigateTo({
-      url: `plugin://yzTradePlugin/buy?bookKey=${bookKey}&openId=${openId}&appId=${appId}&shopId=${shopId}`
+      url: `/packages/trade/index?pageType=buy&bookKey=${bookKey}&openId=${openId}&appId=${appId}&shopId=${shopId}`
     });
   },
 

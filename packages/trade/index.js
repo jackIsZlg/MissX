@@ -13,6 +13,9 @@ Page({
       case 'order-detail':
         url = `detail?orderNo=${options.orderNo}`;
         break;
+      case 'buy':
+        url = `buy?bookKey=${options.bookKey}`;
+        break;
     }
     wx.redirectTo({
       url: `plugin://yzTradePlugin/${url}&openId=${options.openId}&shopId=98539213&appId=wxfb91c44127dc7a17`
