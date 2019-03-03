@@ -14,10 +14,10 @@
         <block wx:if='{{item.preferential_type == 1}}'><text>{{item.value}}</text>元</block>
         <block wx:if='{{item.preferential_type == 2}}'><text>{{item.discount}}</text>折</block>
       </view>
-      <view class='coupon_limit'>满88减8</view>
+      <view class='coupon_limit' >{{item.preferential_type == 1 ? '现金满减': '折扣优惠'}}</view>
     </view>
     <view class='coupon_desc'>
-      <text class='title'>新春快乐－8元</text>
+      <text class='title'>优惠券</text>
       <text>全场通用（特殊商品除外）</text>
       <text>使用期限 {{item.valid_start_at}}～{{item.expire_at}}</text>
     </view>

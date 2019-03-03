@@ -23,7 +23,7 @@
     size-type="{{ 7 }}"
     borderRadiusType="{{ 2 }}"
     open-cart
-    goodsNum="{{ 50 }}"
+    goodsNum="{{ 100 }}"
     redirect-type="3"
     bind:item-click="handleGoodsClick"
     bind:buy="handleGoodsClick"

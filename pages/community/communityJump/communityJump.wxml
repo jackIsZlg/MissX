@@ -4,7 +4,7 @@
     open-id="{{ openId }}"
     goods-from="{{ 0 }}"
     layout="{{ 0 }}"
-    goods-ids="{{ 449971428 }}"
+    goods-ids="{{ 454869063 }}"
     size-type="{{ 7 }}"
     extraData="{{extraData}}"
     redirect-type="0"

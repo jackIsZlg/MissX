@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -55,9 +55,10 @@
 				},
 				{
 					"id": 2,
-					"name": "address",
-					"pathName": "pages/address/editAddress/editAddress",
-					"query": ""
+					"name": "myCoupon",
+					"pathName": "pages/my/myCoupon/myCoupon",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 3,
