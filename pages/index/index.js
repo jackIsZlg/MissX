@@ -83,6 +83,13 @@ Page({
  */
   onShow: function () {
     this.getActivityId(2); //秒杀
+    // if (!wx.getStorageSync('loginInfo')) {
+    //   this.getOpenId();
+    // } else {
+    //   this.setData({
+    //     openId: wx.getStorageSync('loginInfo').openid
+    //   })
+    // }
   },
   onLoad: function () {
     this.getXianshiA(); //限时折扣

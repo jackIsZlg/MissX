@@ -1,9 +1,15 @@
+
 <zan-account
   app-id="{{ appId }}"
   shop-id="{{ shopId }}"
   open-id="{{openId}}"
   show-login="{{ showLogin }}"
   showClose="{{ false }}"
+  bind:fail="handleFail"
+  bind:captcha-fail="handleFail"
   bind:success="handleBindSuccess"
 />
+
+<view wx:if="{{showFail}}" class='fail11'>{{failInfo}}</view>
+
   

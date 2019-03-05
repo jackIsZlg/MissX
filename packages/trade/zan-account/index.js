@@ -4,6 +4,8 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
+    showFail: false,// 展示报错信息
+    failInfo:'',// 报错信息
     openId: wx.getStorageSync('loginInfo').openid,
     extraData: app.globalData.extraData,
     showLogin: true,
@@ -12,19 +14,45 @@ Page({
 
   onLoad: function(options) {
     let { from = '' } = options;
-    console.log(from)
+    if (!wx.getStorageSync('loginInfo')) {
+      this.getOpenId()
+    }
     this.setData({
       from: from,
       openId: wx.getStorageSync('loginInfo').openid
     })
   },
-
   handleShowZanAccount() {
     this.setData({
       showLogin: true
     });
   },
-
+  //获取openId，sessionKey
+  getOpenId: function () {
+    wx.login({
+      success: res => {
+        let that = this;
+        wx.request({
+          url: 'https://miss.xuanyantech.com/api-admin/wechat-login',
+          data: {
+            js_code: res.code
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          method: 'get',
+          success(res) {
+            wx.setStorageSync('loginInfo', res.data.result)
+            that.setData({
+              openId: res.data.result.openid
+            })
+            //console.log(res.data)
+          }
+        })
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      }
+    })
+  },
   bindMobile(mobile){
     let that = this;
     wx.request({
@@ -62,7 +90,18 @@ Page({
       }
     })
   },
-
+  handleFail(e){
+    this.setData({
+      showFail: true,
+      failInfo: e.detail.msg
+    })
+    setTimeout(()=>{
+      this.setData({
+        showFail: false,
+        failInfo: ''
+      })
+    },2000)
+  },
   handleBindSuccess(e) {
     this.bindMobile(e.detail)
     console.log(e.detail, 'mobile');

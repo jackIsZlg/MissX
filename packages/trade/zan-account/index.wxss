@@ -15,3 +15,18 @@
 .bind-mobile {
   margin: 0 20px;
 }
+
+.fail11{
+  padding: 5rpx 20rpx;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  display: block;
+  transform: translate(-50%,-50%)
+}
