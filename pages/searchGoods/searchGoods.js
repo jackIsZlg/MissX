@@ -1,7 +1,4 @@
-// pages/shop/shop.js
-//获取应用实例
-const app = getApp()
-
+// pages/searchGoods/searchGoods.js
 Page({
 
   /**
@@ -11,18 +8,22 @@ Page({
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
     openId: wx.getStorageSync('loginInfo').openid,
-    type: 0,
-    goodsList: [105929740,105927914,106075957,106179292,106179298],
-    goodsGroupId: 105929740,
+    goodsIds: '',
+    info: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let { info = '' } = options
     this.setData({
-      openId: wx.getStorageSync('loginInfo').openid
+      info: info
     })
+    if (!info) {
+    }else {
+      this.searchGoods(info);
+    }
   },
 
   /**
@@ -73,22 +74,37 @@ Page({
   onShareAppMessage: function () {
 
   },
-  // 查询商品
-  searchGoods: function (e) {
-    let info = e.detail.value;
-    wx.navigateTo({
-      url: `/pages/searchGoods/searchGoods?info=${info}`
+  arrayToString(array) {
+    let str = '';
+    array.forEach((item) => {
+      str = str + item.item_id + ','
+    })
+    return str.substring(0, str.length - 1)
+  },
+  searchG:function(e){
+    this.searchGoods(e.detail.value)
+  },
+  //搜索商品
+  searchGoods:function(info) {
+    let that = this;
+    wx.request({
+      url: 'https://miss.xuanyantech.com/api-admin/web/yz-get-items-on-sale',
+      data: {
+        q: info
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'get',
+      success(res) {
+        let items = res.data.result.items;
+        that.setData({
+          goodsIds: that.arrayToString(items)
+        })
+      }
     })
   },
-  // 菜单选择 
-  menuClick: function (e) {
-    let num = e.target.dataset.num;
-    this.setData({
-      type: e.target.dataset.num,
-      goodsGroupId: this.data.goodsList[num]
-    })
-  },
-  handleGoodsClick: function(e){
+  handleGoodsClick: function (e) {
     const { detail } = e;
     wx.navigateTo({
       url: `/packages/trade/index?pageType=goods-detail&alias=${detail.alias}&openId=${this.data.openId}`

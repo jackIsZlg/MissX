@@ -2,7 +2,7 @@
   <view class='shop_qry'>
     <view class='qry'>
       <view class='qry-icon'></view>
-      <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
+      <input placeholder="搜索商品" confirm-type='search' type='text' placeholder-class='input-pla' bindconfirm='searchGoods' />
     </view>
   </view>
   <view class='shop_nav'>

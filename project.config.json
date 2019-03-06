@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -113,6 +113,13 @@
 					"id": -1,
 					"name": "zan-account/index",
 					"pathName": "packages/trade/zan-account/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "searchGoods",
+					"pathName": "pages/searchGoods/searchGoods",
 					"scene": null
 				}
 			]

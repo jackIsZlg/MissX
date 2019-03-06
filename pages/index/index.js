@@ -104,6 +104,13 @@ Page({
       })
     }
   },
+  // 查询商品
+  searchGoods: function (e) {
+    let info = e.detail.value;
+    wx.navigateTo({
+      url: `/pages/searchGoods/searchGoods?info=${info}`
+    })
+  },
   // 获取图片背景
   getImgbg(){
     let that = this;

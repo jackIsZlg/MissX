@@ -1,0 +1,26 @@
+<view class='qry'>
+    <view class='qry-icon'></view>
+    <input placeholder="搜索商品" type='text' value ='{{info}}' placeholder-class='input-pla' confirm-type='search' bindconfirm='searchG' />
+  </view>
+
+<view class='line-he'></view>
+<view class='noGoods' wx:if='{{goodsIds == "" }}'>没有找到商品</view>
+<view wx:if='{{goodsIds !="" }}'>
+  <goods
+    app-id="{{ appId }}"
+    shop-id="{{ shopId }}"
+    open-id="{{ openId }}"
+    goods-ids="{{ goodsIds }}"
+    goods-from="{{ 0 }}"
+    layout="{{ 3 }}"
+    size-type="{{ 7 }}"
+    buyButtonType="{{ 1 }}"
+    open-cart
+    redirect-type="3"
+    goodsNum="{{ 100 }}"
+    bind:item-click="handleGoodsClick"
+    bind:buy="handleGoodsClick"
+  />
+
+</view>
+

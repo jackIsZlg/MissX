@@ -2,7 +2,7 @@
 <view>
   <view class='qry'>
     <view class='qry-icon'></view>
-    <input placeholder="搜索商品" type='text' placeholder-class='input-pla' />
+    <input placeholder="搜索商品" type='text' placeholder-class='input-pla' confirm-type='search' bindconfirm='searchGoods'/>
   </view>
   <swiper
     indicator-dots="{{ true }}"

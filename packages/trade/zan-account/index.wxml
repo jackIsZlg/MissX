@@ -10,6 +10,6 @@
   bind:success="handleBindSuccess"
 />
 
-<view wx:if="{{showFail}}" class='fail11'>{{failInfo}}</view>
+<div wx:if="{{showFail}}" class='fail11'>{{failInfo}}</div>
 
   

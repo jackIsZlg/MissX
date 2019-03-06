@@ -5,6 +5,7 @@
     "pages/shop/shop",
     "pages/my/my",
     "pages/goodsJump/goodsJump",
+    "pages/searchGoods/searchGoods",
     "pages/my/myBalance/myBalance",
     "pages/my/myCoupon/myCoupon",
     "pages/my/myCourse/myCourse",
