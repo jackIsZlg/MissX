@@ -4,23 +4,34 @@
   </view>
 
 <view class='line-he'></view>
-<view class='noGoods' wx:if='{{goodsIds == "" }}'>没有找到商品</view>
-<view wx:if='{{goodsIds !="" }}'>
-  <goods
-    app-id="{{ appId }}"
-    shop-id="{{ shopId }}"
-    open-id="{{ openId }}"
-    goods-ids="{{ goodsIds }}"
-    goods-from="{{ 0 }}"
-    layout="{{ 3 }}"
-    size-type="{{ 7 }}"
-    buyButtonType="{{ 1 }}"
-    open-cart
-    redirect-type="3"
-    goodsNum="{{ 100 }}"
-    bind:item-click="handleGoodsClick"
-    bind:buy="handleGoodsClick"
-  />
+<view class='noGoods' wx:if='{{!hasGoods}}'>没有找到商品</view>
+<view wx:if='{{hasGoods}}'>
+
+ <scroll-view
+    scroll-y
+    style='height: {{height}};'
+    bindscrolltolower="lower"
+  >
+   <view wx:for="{{goodsIds}}" wx:key='{{index}}' >
+    <goods
+        app-id="{{ appId }}"
+        shop-id="{{ shopId }}"
+        open-id="{{ openId }}"
+        goods-ids="{{ item }}"
+        goods-from="{{ 0 }}"
+        goodsNum="{{ 100 }}"
+        layout="{{ 3 }}"
+        size-type="{{ 7 }}"
+        buyButtonType="{{ 1 }}"
+        open-cart
+        redirect-type="3"
+        bind:item-click="handleGoodsClick"
+        bind:buy="handleGoodsClick"
+      />
+   </view>
+   
+  </scroll-view>
+  
 
 </view>
 

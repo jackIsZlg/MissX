@@ -7,8 +7,12 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
+    pageNo: 1,
+    totalPage: 1,
     openId: wx.getStorageSync('loginInfo').openid,
-    goodsIds: '',
+    hasGoods: false,
+    goodsIds: [],
+    height: '',
     info: ''
   },
 
@@ -16,10 +20,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let { info = '' } = options
+    let { info = 'nima111' } = options
     this.setData({
-      info: info
+      info: info,
+      hasGoods: !info ? false : true
     })
+    this.getPhone();
     if (!info) {
     }else {
       this.searchGoods(info);
@@ -74,23 +80,52 @@ Page({
   onShareAppMessage: function () {
 
   },
+  getPhone() {
+    let that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          height: res.windowHeight - (res.windowWidth / 750) * 94 + "px"
+        })
+      }
+    })
+  },
+  lower(e) {
+    let { pageNo, totalPage, info} = this.data
+    if (pageNo < totalPage) {
+      pageNo = pageNo + 1;
+      this.setData({
+        pageNo: pageNo
+      })
+      this.searchGoods(info, pageNo)
+    }
+  },
   arrayToString(array) {
     let str = '';
+    if (!array) {
+      return '';
+    }
     array.forEach((item) => {
       str = str + item.item_id + ','
     })
     return str.substring(0, str.length - 1)
   },
   searchG:function(e){
+    this.setData({
+      info: e.detail.value,
+      goodsIds: [],
+    })
     this.searchGoods(e.detail.value)
   },
   //搜索商品
-  searchGoods:function(info) {
+  searchGoods: function (info, pageNo =1) {
     let that = this;
     wx.request({
       url: 'https://miss.xuanyantech.com/api-admin/web/yz-get-items-on-sale',
       data: {
-        q: info
+        q: info,
+        pageNo: pageNo,
+        pageSize: 10
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -98,9 +133,13 @@ Page({
       method: 'get',
       success(res) {
         let items = res.data.result.items;
+        that.data.goodsIds.push(that.arrayToString(items));
         that.setData({
-          goodsIds: that.arrayToString(items)
+          totalPage: Math.ceil(res.data.result.count / 10),
+          hasGoods: that.data.goodsIds[0].length != 0  ? true : false,
+          goodsIds: that.data.goodsIds
         })
+        console.log(that.data.goodsIds)
       }
     })
   },
