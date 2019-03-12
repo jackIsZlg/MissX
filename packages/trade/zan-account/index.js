@@ -4,8 +4,8 @@ Page({
   data: {
     appId: 'wxfb91c44127dc7a17',
     shopId: 98539213,
-    showFail: true,// 展示报错信息
-    failInfo:'已经发送过验证码，请稍后重试',// 报错信息
+    showFail: false,// 展示报错信息
+    failInfo:'',// 报错信息
     openId: wx.getStorageSync('loginInfo').openid,
     extraData: app.globalData.extraData,
     showLogin: true,
