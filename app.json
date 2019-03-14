@@ -31,7 +31,7 @@
       ],
       "plugins": {
         "yzTradePlugin": {
-          "version": "0.7.3",
+          "version": "0.7.4",
           "provider": "wxef2db03c377b0016"
         }
       }
@@ -96,7 +96,7 @@
       "provider": "wx7264e79652f66bc9"
     },
     "yzCartPlugin": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "provider": "wx10ed5d6fd4792bfe"
     }
   },

@@ -30,7 +30,7 @@ Page({
       { icon: `${app.globalData.baseUrl}/img/WeChat/myCenter_linkIcon7.png`, name: '课程', url: '/pages/my/myCourse/myCourse' },
     ],
     groupFlag: wx.getStorageSync('loginInfo').groupFlag, // 判断是否绑定过社群
-    salesmanFlag: wx.getStorageSync('loginInfo').salesmanFlag, //判断是否是分销员
+    memberFlag: wx.getStorageSync('loginInfo').memberFlag, //判断是否是分销员
     flag: wx.getStorageSync('loginInfo').flag, //判断手机号是否绑定
     userInfo: null,
     hasUserInfo: false,
@@ -43,7 +43,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       flag: wx.getStorageSync('loginInfo').flag,
-      salesmanFlag: wx.getStorageSync('loginInfo').salesmanFlag,
+      memberFlag: wx.getStorageSync('loginInfo').memberFlag,
       groupFlag: wx.getStorageSync('loginInfo').groupFlag
     })
     if (app.globalData.userInfo) {
@@ -68,7 +68,7 @@ Page({
   onShow: function () {
     this.setData({
       flag: wx.getStorageSync('loginInfo').flag,
-      salesmanFlag: wx.getStorageSync('loginInfo').salesmanFlag,
+      memberFlag: wx.getStorageSync('loginInfo').memberFlag,
       groupFlag: wx.getStorageSync('loginInfo').groupFlag
     })
   },
@@ -135,7 +135,7 @@ Page({
   //跳转社群
   goToMyCenter: function () {
     let url = '';
-    if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
+    if (wx.getStorageSync('loginInfo').memberFlag) { // 如果支付成功已经成为分销员
       if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
         url = '/pages/community/communityPay/communityPay';
       } else { // 没有绑定过

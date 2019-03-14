@@ -2,6 +2,10 @@
   <view class='title'>{{groupInfo.groupName}}</view>
   <view>
      <!-- <view class='image-bg'></view> -->
-     <image src='{{bannerList[7].url}}' class='image-bg'></image>
+     <image src='{{bannerList[7].url}}' 
+      class='image-bg'
+      data-src="{{bannerList[7].url}}" 
+      bindtap="previewImage"
+     ></image>
   </view>
 </view>

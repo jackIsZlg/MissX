@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -120,6 +120,13 @@
 					"id": -1,
 					"name": "searchGoods",
 					"pathName": "pages/searchGoods/searchGoods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "communityPay",
+					"pathName": "pages/community/communityPay/communityPay",
 					"scene": null
 				}
 			]

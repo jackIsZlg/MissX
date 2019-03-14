@@ -87,9 +87,21 @@ Page({
         url: '/packages/trade/zan-account/index'
       })
     } else {
-      wx.navigateTo({
-        url: '/pages/community/communityJump/communityJump'
-      })
+      if (wx.getStorageSync('loginInfo').memberFlag) {
+        if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
+          wx.navigateTo({
+            url: '/pages/community/communityPay/communityPay'
+          })
+        } else { // 没有绑定过
+            wx.navigateTo({
+              url: '/pages/community/communitySelect/communitySelect'
+            })
+        }
+      } else {
+        wx.navigateTo({
+          url: '/pages/community/communityJump/communityJump'
+        })
+      }
       // wx.navigateToMiniProgram({
       //   appId: 'wx1218f52c957939af', // 要跳转的小程序的appid
       //   path: 'pages/goods/detail/index?alias=2ogl3i386cpxp', // 跳转的目标页面

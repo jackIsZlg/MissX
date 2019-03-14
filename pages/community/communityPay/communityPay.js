@@ -17,6 +17,13 @@ Page({
     this.getInfo();
     this.getImgbg();
   },
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current,
+      urls: [current]
+    })
+  },
   // 获取图片背景
   getImgbg() {
     let that = this;

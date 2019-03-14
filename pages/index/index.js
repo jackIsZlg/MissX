@@ -284,7 +284,7 @@ Page({
   //跳转社群
   goToMyCenter: function () {
     let url = '';
-    if (wx.getStorageSync('loginInfo').salesmanFlag) { // 如果支付成功已经成为分销员
+    if (wx.getStorageSync('loginInfo').memberFlag) { // 如果支付成功已经成为分销员
       if (wx.getStorageSync('loginInfo').groupFlag) { //绑定过社群
         url = '/pages/community/communityPay/communityPay';
       } else { // 没有绑定过
@@ -309,7 +309,12 @@ Page({
         url: '/pages/cart/cart'
       })
     } else if (type == 'service'){
-
+      wx.makePhoneCall({
+        phoneNumber: '‭0571-58088005',
+        success: function () {
+          console.log("成功拨打电话")
+        },
+      })
     } else {
       wx.pageScrollTo({
         scrollTop: 0

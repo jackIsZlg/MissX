@@ -212,7 +212,7 @@
 
   <view wx:if='{{showFix}}'>
      <view class='index-shop' bindtap='openFix' data-type='shop'></view>
-     <!-- <view class='index-service' bindtap='openFix' data-type='service'></view> -->
+     <view class='index-service' bindtap='openFix' data-type='service'></view>
      <view class='index-top' bindtap='openFix' data-type='top'></view>
      <view class='index-close' bindtap='openFix' data-type='close'></view>
   </view>
